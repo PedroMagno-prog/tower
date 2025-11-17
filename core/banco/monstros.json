@@ -1,0 +1,26 @@
+[
+    {
+        "nome": "Kobold Minion",
+        "tipo": "Normal",
+        "nivel": 0.25,
+        "descricao": "Pequeno; Stab: 1d4"
+    },
+    {
+        "nome": "Kobold",
+        "tipo": "Normal",
+        "nivel": 0.25,
+        "descricao": "Pequeno; Stab: 1d4+2(or Sling, Range 8)"
+    },
+    {
+        "nome": "Kobold Sneak",
+        "tipo": "Normal",
+        "nivel": 0.5,
+        "descricao": "HP: 15; Pequeno; Revenge!; Stab: 1d4+2(or Sling, Range 8)"
+    },
+    {
+        "nome": "Goblin Minion",
+        "tipo": "Normal",
+        "nivel": 0.25,
+        "descricao": "Pequeno; 1d6"
+    }
+]
