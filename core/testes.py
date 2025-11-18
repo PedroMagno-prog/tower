@@ -1,5 +1,5 @@
 from models.models import *
-
+"""
 segmento = []
 segmento.append(CampoFichaPersonagem("Força", 5, "Quão forte e resistente o personagem é!"))
 segmento.append(CampoFichaPersonagem("Destreza", 3, "Quão rápido e ágil o personagem é!"))
@@ -17,3 +17,17 @@ for x in range(ficha):
     print(ficha[x].nome)
     print(ficha[x].valor)
     print(ficha[x].descricao)
+    """
+
+from scipy.interpolate import lagrange
+import numpy as np
+
+# Exemplo de uso com scipy
+x = [1, 50, 100]
+y = [80, 55, 10]
+
+# Cria a função do polinômio interpolador
+poly = lagrange(x, y)
+
+# Estima um valor
+print(poly(90))

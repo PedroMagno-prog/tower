@@ -1,7 +1,7 @@
 [
     {
         "nome": "Kobold Minion",
-        "tipo": "Normal",
+        "tipo": "Minion",
         "nivel": 0.25,
         "descricao": "Pequeno; Stab: 1d4"
     },
@@ -19,7 +19,7 @@
     },
     {
         "nome": "Goblin Minion",
-        "tipo": "Normal",
+        "tipo": "Minion",
         "nivel": 0.25,
         "descricao": "Pequeno; 1d6"
     }

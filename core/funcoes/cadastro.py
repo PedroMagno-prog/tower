@@ -58,11 +58,13 @@ def cadastro_monstro():
             if nome == 'nimble':
                 print("Voltando ao menu... ")
                 return
-            tipo = input("É Normal(n) ou Lendário(l)? --> ")
+            tipo = input("É Minion(m), Normal(n) ou Lendário(l)? --> ")
             if tipo == "n":
                 tipo = "Normal"
             elif tipo == "l":
                 tipo = "Lendário"
+            elif tipo == "m":
+                tipo = "Minion"
             else:
                 raise Exception
             nivel = float(input("Qual o nível dele? --> "))
@@ -77,11 +79,11 @@ def cadastro_monstro():
     pass
 
 def cadastro_loot():
-    print("Vamos cadastrar um pouco de LOOT!")
+    print("Vamos cadastrar um pouco de LOOT! (digite 'nimble' no campo NOME para sair)")
     print("=" * 56)
     while True:
         try:
-            nome = input("Qual o nome do item? (digite 'nimble' para sair) --> ")
+            nome = input("Qual o nome do item? --> ")
             if nome == 'nimble':
                 print("Voltando ao menu... ")
                 return

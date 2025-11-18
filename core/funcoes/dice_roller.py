@@ -34,6 +34,7 @@ def roll_XdYdl_Z(x, y, z):
         rolls_sort.pop(0)
     return rolls_sort
 
+# drop Z highest result
 def roll_XdYdh_Z(x, y, z):
     rolls_sort = sorted(roll_XdY(x, y), reverse=True)
     for _ in range(z):
