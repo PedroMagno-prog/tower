@@ -31,3 +31,12 @@ poly = lagrange(x, y)
 
 # Estima um valor
 print(poly(90))
+
+print("="*56)
+
+# C = 80
+# D = int(input("Dif: --> "))
+# #D vai de 0 a 100
+# D_redutor = C -(C * (D/100))
+# print(D_redutor)
+# print(C-D_redutor)

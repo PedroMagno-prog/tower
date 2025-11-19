@@ -27,15 +27,15 @@ Returns:
 def roll_XdY(x, y):
     return list((randint(1, y)) for _ in range(x))
 
-# drop the Z lowest result
-def roll_XdYdl_Z(x, y, z):
+# drop the A lowest result
+def roll_XdYdlA(x, y, z):
     rolls_sort = sorted(roll_XdY(x, y))
     for _ in range(z):
         rolls_sort.pop(0)
     return rolls_sort
 
-# drop Z highest result
-def roll_XdYdh_Z(x, y, z):
+# drop A highest result
+def roll_XdYdhA(x, y, z):
     rolls_sort = sorted(roll_XdY(x, y), reverse=True)
     for _ in range(z):
         rolls_sort.pop(0)

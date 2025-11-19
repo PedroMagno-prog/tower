@@ -1,15 +1,9 @@
-"""
-A ideia aqui é
-
-se baseando no nível do personagem
-
-"""
-
-from funcoes.util import *
-from funcoes.dice_roller import *
-from funcoes.cadastro import (
+from funcoes.util import run_action
+from funcoes.rng import abrir_bau
+from funcoes.cadastro_db import (
     carregar_dados,
     salvar_dados,
+    criar_monstro,
     cadastro_monstro,
     cadastro_loot,
     ver_monstros,
@@ -18,29 +12,11 @@ from funcoes.cadastro import (
 
 valor_em_po = {} # tabelar raridade com um valor X em PO
 
-def criar_monstro():
-
-    tipo_monstro = input("Qual tipo do Monstro? Minion (m), Normal(n) ou Lendário (l)? --> ")
-    if tipo_monstro == "l":
-        # Em desenvolvimento
-        pass
-    else:
-        print("Deseja ")
-        pass
-    print("Deseja criar um monstro em que nível?")
-    # criar_monstro()
-
-    pass
-
 def gerar_encontro(nivel_party):
     dificuldade = int(input("Qual dificuldade deve ser o encontro? --> "))
 
     # level total dos monstros deve ser a soma dos niveis dos players
 
-    pass
-
-def abrir_bau(andar):
-    dificuldade = int(input("Qual dificuldade foi a sala ddo baú? --> "))
     pass
 
 

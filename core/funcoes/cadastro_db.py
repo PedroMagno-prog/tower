@@ -111,6 +111,19 @@ def cadastro_loot():
 
     pass
 
+def criar_monstro():
+
+    tipo_monstro = input("Qual tipo do Monstro? Minion (m), Normal(n) ou Lendário (l)? --> ")
+    if tipo_monstro == "l":
+        # Em desenvolvimento
+        pass
+    else:
+        print("Deseja ")
+        pass
+    print("Deseja criar um monstro em que nível?")
+    # criar_monstro()
+
+    pass
 
 def ver_monstros():
     print("\n--- Lista de Monstros Cadastrados ---")
