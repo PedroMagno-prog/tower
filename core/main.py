@@ -13,7 +13,7 @@ from funcoes.cadastro_db import (
 valor_em_po = {} # tabelar raridade com um valor X em PO
 
 
-def menu(nivel_party, andar):
+def menu(nivel_party, andar, n_players):
     # menu que processa uma única vez. No Main temos o loop infinito
     print("=" * 56,
           "\nEscolha uma opção:"
@@ -39,7 +39,7 @@ def menu(nivel_party, andar):
         '4': lambda: ver_loots(),
         '5': lambda: criar_monstro(),
         '6': lambda: gerar_encontro(nivel_party),
-        '7': lambda: abrir_bau(andar, dif),
+        '7': lambda: abrir_bau(andar, n_players),
         '10': lambda: salvar_dados()
     }
     # 1. Usamos .get() para buscar a função no dicionário.
@@ -62,16 +62,16 @@ def main():
         print("="*20 + "Bem-Vindo Criador_Dev!" + "="*20)
         print()
         print("Antes de começarmos, precisamos definir alguns valores... ")
-        n_jogadores = int(input("Quantos jogadores estão jogando? --> "))
+        n_players = int(input("Quantos jogadores estão jogando? --> "))
         nivel = int(input("Em que nível, individualmente, eles estão? (Exe: todos estão no nível 3) --> "))
-        nivel_party = calcular_nivel_party(nivel, n_jogadores)
+        nivel_party = calcular_nivel_party(nivel, n_players)
         print("Nível da Party é " + str(nivel_party))
         andar = int(input("Em qual andar a party se encontra? --> "))
 
 
         opcao_menu = True
         while opcao_menu:
-            opcao_menu = menu(nivel_party, andar)
+            opcao_menu = menu(nivel_party, andar, n_players)
 
     print("Programa finalizado")
     pass

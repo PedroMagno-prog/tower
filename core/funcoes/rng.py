@@ -1,5 +1,6 @@
 from scipy.interpolate import lagrange
 from random import choices
+from .util import convert_dificuldade
 
 """
             Andar 1
@@ -49,7 +50,13 @@ def rng_rarity(andar:int, dificuldade:int) -> dict:
 
     return pesos_finais
 
-def abrir_bau(andar:int, dificuldade:int, n_players:int) -> list:
+def abrir_bau(andar:int, n_players:int) -> list:
+    try:
+        dificuldade = input("Qual a dificuldade do encontro que acabaram de ter?\n"
+                        "   digite: facil, normal, dificil, letal ou impossivel: ")
+        dificuldade = convert_dificuldade(dificuldade)
+    except:
+        dificuldade = 0
 
     pesos = rng_rarity(andar, dificuldade)
     raridades = list(pesos.keys())
@@ -67,4 +74,4 @@ def gerar_encontro(nivel_party):
 # print(raro)
 # print(abrir_bau(80, 50, 4))
 
-print(abrir_bau(78, 0, 3))
+print(abrir_bau(78, 4))
