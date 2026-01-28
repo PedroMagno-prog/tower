@@ -24,7 +24,7 @@ def read_action(comando: str) -> list:
     # ex2: ['2', '3', '12', 'l1', '12', '-5']
     # The split() method returns a list of substrings.
     if '#' in comando:
-        comando_final.append(comando_referencia[index]) #index=0
+        comando_final.append(int(comando_referencia[index])) #index=0
         index += 1 #index=1
     else:
         comando_final.append(1)
@@ -56,13 +56,14 @@ def read_action(comando: str) -> list:
     else:
         comando_final.append(0)
     comando_final.append(adicao)
+    print(comando_final)
     return comando_final
 
 def run_action(comando: str):
     c = read_action(comando)
     """
     return: ['R orN', 'X', 'Y', 'lA orN', 'Z orN', 'W orN', 'False ou True']
-                0      1     2     3         4        5            6
+                1      1     2     3         4        5            6
     
     QUAL rolagem fazer é considerar só o A e Z. 
         o W só aplica no resultado final
@@ -76,19 +77,18 @@ def run_action(comando: str):
     X = int(c[1])
     Y = int(c[2])
     funcao = roll_XdY
-    A = False
+    D = False
     Z = False
-    funcao(X, Y)
 
     if c[4] is not None:
         Z = int(c[4])
         funcao = roll_XdY_eZ
     if c[3] is not None:
-        A = int(c[3])
+        pass
 
-    for r in range(R):
+    for r in range(int(R)):
         rolagens[r] = funcao(X, Y)
 
     pass
 
-run_action("3d6")
+read_action("3d6")

@@ -1,4 +1,3 @@
-
 from scipy.interpolate import lagrange
 from random import choices
 
@@ -34,7 +33,7 @@ Dif = 50% ; peso_comum = 50%
 Dif = 100% ; peso_comum = 0% 
 """
 
-def rng_rarity(andar:int, dificuldade:int) -> str:
+def rng_rarity(andar:int, dificuldade:int) -> dict:
 
     rng_polys = {}    # dicionário, com a função 'poly' pra cada raridade
     pesos_finais = {} # dicionário, com os pesos, pra cada raridade, do andar selecionado
@@ -47,21 +46,25 @@ def rng_rarity(andar:int, dificuldade:int) -> str:
             pesos_finais[r] = p - p*(dificuldade/100)
         else:
             pesos_finais[r] = p
-        #print("Raridade:", r)
-        #print("Peso:    ", pesos_finais[r])
-        #print()
 
-    raridades = list(pesos_finais.keys())
-    pesos = list(pesos_finais.values())
-    chosen_rarity = choices(raridades, weights=pesos)[0]
-    # print("Item:", chosen_rarity)
-    return chosen_rarity
+    return pesos_finais
 
 def abrir_bau(andar:int, dificuldade:int, n_players:int) -> list:
-    return list(rng_rarity(andar, dificuldade) for _ in range(n_players))
 
+    pesos = rng_rarity(andar, dificuldade)
+    raridades = list(pesos.keys())
+    pesos = list(pesos.values())
 
-    return itens
-raro = rng_rarity(20,20)
-print(raro)
-print(abrir_bau(80, 50, 4))
+    return list((choices(raridades, weights=pesos)[0]) for _ in range(n_players))
+
+def gerar_encontro(nivel_party):
+    dificuldade = int(input("Qual dificuldade deve ser o encontro? --> "))
+
+    # level total dos monstros deve ser a soma dos niveis dos players
+    pass
+
+# raro = rng_rarity(20,20)
+# print(raro)
+# print(abrir_bau(80, 50, 4))
+
+print(abrir_bau(78, 0, 3))

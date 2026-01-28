@@ -1,5 +1,5 @@
-from funcoes.util import run_action
-from funcoes.rng import abrir_bau
+from funcoes.util import calcular_nivel_party
+from funcoes.rng import abrir_bau, gerar_encontro
 from funcoes.cadastro_db import (
     carregar_dados,
     salvar_dados,
@@ -11,13 +11,6 @@ from funcoes.cadastro_db import (
 )
 
 valor_em_po = {} # tabelar raridade com um valor X em PO
-
-def gerar_encontro(nivel_party):
-    dificuldade = int(input("Qual dificuldade deve ser o encontro? --> "))
-
-    # level total dos monstros deve ser a soma dos niveis dos players
-
-    pass
 
 
 def menu(nivel_party, andar):
@@ -46,7 +39,7 @@ def menu(nivel_party, andar):
         '4': lambda: ver_loots(),
         '5': lambda: criar_monstro(),
         '6': lambda: gerar_encontro(nivel_party),
-        '7': lambda: abrir_bau(andar),
+        '7': lambda: abrir_bau(andar, dif),
         '10': lambda: salvar_dados()
     }
     # 1. Usamos .get() para buscar a função no dicionário.
