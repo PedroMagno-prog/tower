@@ -1,524 +1,1199 @@
 [
     {
-        "nome": "Kobold Minion",
-        "tipo": "Minion",
-        "nivel": 0.25,
-        "descricao": "Small; Stab. 1d4 (follows minion rules)."
-    },
-    {
-        "nome": "Kobold",
-        "tipo": "Normal",
-        "nivel": 0.25,
-        "descricao": "HP: 12; Small; Stab. 1d4+2 (or Sling, Range 8)."
-    },
-    {
-        "nome": "Kobold Sneak",
-        "tipo": "Normal",
-        "nivel": 0.5,
-        "descricao": "HP: 15; Small; Revenge! When an ally dies, you may move up to 6 spaces before using your Nooooo! ability.\nStab. 1d4+2 (or Sling, Range 8)."
-    },
-    {
-        "nome": "Kobold Trapper",
-        "tipo": "Normal",
-        "nivel": 1,
-        "descricao": "HP: 26; Small; Trap! When an enemy moves adjacent to you or an ally, they trigger one of your traps! (1/encounter each).\n• BEEES! Deal 5d4 damage (doesn't miss). Half as much to ALL adjacent creatures.\n• HIDDEN NET! Restrained (escape DC 10).\nThrow Scorpion (2x). (Range 8) 1d4+2."
-    },
-    {
-        "nome": "Kobold Denwarden",
-        "tipo": "Normal",
-        "nivel": 1,
-        "descricao": "HP: 20; Hold! Adjacent allies gain Medium Armor.\nStab (2x). 1d4+2 (or Sling, Range 8)."
-    },
-    {
-        "nome": "Kobold Clanger",
-        "tipo": "Normal",
-        "nivel": 1,
-        "descricao": "HP: 16; CLANG! Allies who hear your clanging, roll 1 additional die whenever they attack."
-    },
-    {
-        "nome": "Goblin Minion",
-        "tipo": "Minion",
-        "nivel": 0.25,
-        "descricao": "Small; Stab. 1d6 (follows minion rules)."
-    },
-    {
-        "nome": "Goblin",
-        "tipo": "Normal",
-        "nivel": 0.25,
-        "descricao": "HP: 15; Small; Haha, Missed Me! Whenever an attack misses you, deal 1 psychic damage in return.\nStab. 1d6+2 (or Shoot, Range 8)."
-    },
-    {
-        "nome": "Bugbear",
-        "tipo": "Normal",
-        "nivel": 2,
-        "descricao": "HP: 30; • Cleave. 2d6+4. OR:\n• Javelin. 1d6+2 (Range 8)."
-    },
-    {
-        "nome": "Goblin Taskmaster",
-        "tipo": "Normal",
-        "nivel": 2,
-        "descricao": "HP: 30; Small; Meat Shield. Can force other goblins to Interpose for him.\n• Stab. 1d6+2 (or Shoot, Range 8). Then:\n• Get in here! Call a goblin minion to the fight."
-    },
-    {
-        "nome": "Goblin Ratrider",
-        "tipo": "Normal",
-        "nivel": 2,
-        "descricao": "HP: 30; CHAAARGE! If you move at least 4 spaces in a straight line, attack with advantage once.\nBite & Stab (2x). 1d6+2. On crit: Prone."
-    },
-    {
-        "nome": "Bandit Minion",
-        "tipo": "Minion",
-        "nivel": 0.25,
-        "descricao": "Parry. Treat attacks against you that roll 2 as a miss.\nStab. 1d8 (follows minion rules)."
-    },
-    {
-        "nome": "Bandit Hunter",
-        "tipo": "Normal",
-        "nivel": 1,
-        "descricao": "HP: 22; Parry. Treat attacks against you that roll 2 as a miss.\n2d8+2 (Range 12)."
-    },
-    {
         "nome": "Bandit",
         "tipo": "Normal",
+        "familia": "Bandido",
         "nivel": 0.25,
         "descricao": "HP: 12; Parry. Treat attacks against you that roll 2 as a miss.\nStab. 1d8+1 (or Shoot, Range 8)."
     },
     {
+        "nome": "Bandit Minion",
+        "tipo": "Minion",
+        "familia": "Bandido",
+        "nivel": 0.25,
+        "descricao": "Parry. Treat attacks against you that roll 2 as a miss.\nStab. 1d8 (follows minion rules)."
+    },
+    {
+        "nome": "Goblin",
+        "tipo": "Normal",
+        "familia": "Goblin",
+        "nivel": 0.25,
+        "descricao": "HP: 15; Small; Haha, Missed Me! Whenever an attack misses you, deal 1 psychic damage in return.\nStab. 1d6+2 (or Shoot, Range 8)."
+    },
+    {
+        "nome": "Goblin Minion",
+        "tipo": "Minion",
+        "familia": "Goblin",
+        "nivel": 0.25,
+        "descricao": "Small; Stab. 1d6 (follows minion rules)."
+    },
+    {
+        "nome": "Kobold",
+        "tipo": "Normal",
+        "familia": "Kobold",
+        "nivel": 0.25,
+        "descricao": "HP: 12; Small; Stab. 1d4+2 (or Sling, Range 8)."
+    },
+    {
+        "nome": "Kobold Minion",
+        "tipo": "Minion",
+        "familia": "Kobold",
+        "nivel": 0.25,
+        "descricao": "Small; Stab. 1d4 (follows minion rules)."
+    },
+    {
+        "nome": "Skeleton",
+        "tipo": "Normal",
+        "familia": "Morto-Vivo",
+        "nivel": 0.25,
+        "descricao": "HP: 10; Unliving, Undying. The first time this dies, reset to 1 HP instead (excluding minions).\nGrave Arrow. 1d4+3 (Range 8)."
+    },
+    {
+        "nome": "Snakeman Minion",
+        "tipo": "Minion",
+        "familia": "Homem-Cobra",
+        "nivel": 0.25,
+        "descricao": "Coiling Strike. On melee crit: Grapple (escape DC 10).\nStrike. 1d6 melee/ranged (follows minion rules)."
+    },
+    {
+        "nome": "Troglodyte",
+        "tipo": "Normal",
+        "familia": "Troglodita",
+        "nivel": 0.25,
+        "descricao": "HP: 14; Overwhelming Stench. When rolling initiative VS Troglodytes, make a STR save instead.\nDeath Stench. On death: Poison adjacent enemies for 1 round.\nClaws. 1d6+3."
+    },
+    {
+        "nome": "Grave Crow Minion",
+        "tipo": "Minion",
+        "familia": "Morto-Vivo",
+        "nivel": 0.5,
+        "descricao": "Doom Peck. 2 damage.\nDread of Death. WIL save instead of rolling for Initiative against Death Knights."
+    },
+    {
+        "nome": "Kobold Sneak",
+        "tipo": "Normal",
+        "familia": "Kobold",
+        "nivel": 0.5,
+        "descricao": "HP: 15; Small; Revenge! When an ally dies, you may move up to 6 spaces before using your Nooooo! ability.\nStab. 1d4+2 (or Sling, Range 8)."
+    },
+    {
+        "nome": "Seedling",
+        "tipo": "Normal",
+        "familia": "Planta",
+        "nivel": 0.5,
+        "descricao": "HP: 8; Small; Peeling Bark. Damage degrades Armor 1 step: Heavy » Medium >> None.\nThorn Seed. (Range 6) 2d6+2."
+    },
+    {
+        "nome": "Sprite",
+        "tipo": "Normal",
+        "familia": "Fada",
+        "nivel": 0.5,
+        "descricao": "HP: 12; Tiny; Spritely Evasion: Attacks against Faeries are rolled with disadvantage and miss on 2 or less.\nFae Trick. 1d4+4."
+    },
+    {
+        "nome": "Stenchling",
+        "tipo": "Normal",
+        "familia": "Infernal",
+        "nivel": 0.5,
+        "descricao": "HP: 18; Small; Putrid Cloud. On Death: 2d6 poison damage to enemies within Reach 2.\nBite. 2d6."
+    },
+    {
+        "nome": "Stirge",
+        "tipo": "Normal",
+        "familia": "Fera",
+        "nivel": 0.5,
+        "descricao": "HP: 10; Tiny; Evasive Flier. Attacks against stirges are made with disadvantage.\nLatch On. 1d4+2. On hit: Latched On."
+    },
+    {
+        "nome": "Warpig",
+        "tipo": "Normal",
+        "familia": "Fera",
+        "nivel": 0.5,
+        "descricao": "HP: 18; Battlelust. Heroes have disadvantage on Initiative against a band composed mostly of Orcs.\nTough as Nails. Medium armor, except against magic damage.\nEnrage. When crit: deal 5 damage to an adjacent enemy.\nGore. 1d10."
+    },
+    {
+        "nome": "Zombie",
+        "tipo": "Normal",
+        "familia": "Morto-Vivo",
+        "nivel": 0.5,
+        "descricao": "HP: 15; Unliving, Undying. The first time this dies, reset to 1 HP instead (excluding minions).\nCrunch. 1d4+4 On damage: Grappled."
+    },
+    {
+        "nome": "Acidpod",
+        "tipo": "Normal",
+        "familia": "Planta",
+        "nivel": 1,
+        "descricao": "HP: 8; Small; Peeling Bark. Damage degrades Armor 1 step: Heavy » Medium >> None.\nCaustic Eruption. On death: 4d6 acid damage to ALL adjacent creatures.\nGrab. DC 12 DEX save or Grappled."
+    },
+    {
+        "nome": "Bandit Hunter",
+        "tipo": "Normal",
+        "familia": "Bandido",
+        "nivel": 1,
+        "descricao": "HP: 22; Parry. Treat attacks against you that roll 2 as a miss.\n2d8+2 (Range 12)."
+    },
+    {
+        "nome": "Cultist",
+        "tipo": "Normal",
+        "familia": "Cultista",
+        "nivel": 1,
+        "descricao": "HP: 28; Fanatical Zeal. While not at max HP, make all rolls with advantage. Your crits also inflict Despair.\n• Oblation of Blood! If undamaged, attack self for 2 damage. Adjacent enemies are inflicted with Despair. OR:\n• Dreadful Blade. 1d6+6."
+    },
+    {
+        "nome": "Ghoul",
+        "tipo": "Normal",
+        "familia": "Morto-Vivo",
+        "nivel": 1,
+        "descricao": "HP: 20; Unliving, Undying. The first time this dies, reset to 1 HP instead (excluding minions).\nSickening Claw. 1d4+8. On damage: Dazed."
+    },
+    {
+        "nome": "Gnoll",
+        "tipo": "Normal",
+        "familia": "Gnoll",
+        "nivel": 1,
+        "descricao": "HP: 28; Frenzy. Advantage against Bloodied creatures.\n• Ravage (2x). 1d10. OR: • Shoot. (Range 12) 1d10."
+    },
+    {
+        "nome": "Grave Squire Minion",
+        "tipo": "Minion",
+        "familia": "Morto-Vivo",
+        "nivel": 1,
+        "descricao": "Dark Devotion. Can Interpose for knights.\nTouched by Death. Damage from Death Knights also causes 1 Wound."
+    },
+    {
+        "nome": "Gray Ooze",
+        "tipo": "Normal",
+        "familia": "Limo",
+        "nivel": 1,
+        "descricao": "HP: 28; Digestive Touch. Contact with an ooze inflicts the Digested condition: they deal an additional X damage for each time the target has been Digested this encounter.\nAcidic Touch (2x). 1d6+2."
+    },
+    {
+        "nome": "Kobold Clanger",
+        "tipo": "Normal",
+        "familia": "Kobold",
+        "nivel": 1,
+        "descricao": "HP: 16; CLANG! Allies who hear your clanging, roll 1 additional die whenever they attack."
+    },
+    {
+        "nome": "Kobold Denwarden",
+        "tipo": "Normal",
+        "familia": "Kobold",
+        "nivel": 1,
+        "descricao": "HP: 20; Hold! Adjacent allies gain Medium Armor.\nStab (2x). 1d4+2 (or Sling, Range 8)."
+    },
+    {
+        "nome": "Kobold Trapper",
+        "tipo": "Normal",
+        "familia": "Kobold",
+        "nivel": 1,
+        "descricao": "HP: 26; Small; Trap! When an enemy moves adjacent to you or an ally, they trigger one of your traps! (1/encounter each).\n• BEEES! Deal 5d4 damage (doesn't miss). Half as much to ALL adjacent creatures.\n• HIDDEN NET! Restrained (escape DC 10).\nThrow Scorpion (2x). (Range 8) 1d4+2."
+    },
+    {
+        "nome": "Lizardfolk Reedstalker",
+        "tipo": "Normal",
+        "familia": "Homem-Lagarto",
+        "nivel": 1,
+        "descricao": "HP: 26; Muck Walkers. Double movement while in Muck. Cold-Blooded. Hit by Ice-based attack = Poisoned 1 round.\nSneak. You are Invisible until you attack.\nBlowpipe. (Range 8) 1d8, On damage: Poisoned for 1 round (healing ends)."
+    },
+    {
+        "nome": "Orc",
+        "tipo": "Normal",
+        "familia": "Orc",
+        "nivel": 1,
+        "descricao": "HP: 26; Battlelust. Heroes have disadvantage on Initiative against a band composed mostly of Orcs.\nTough as Nails. Medium armor, except against magic damage.\nEnrage. When crit: deal 5 damage to an adjacent enemy.\n• Battleaxe. 1d10+4. OR: • Javelin. 1d6+4 (Range 8)."
+    },
+    {
+        "nome": "Quasit",
+        "tipo": "Normal",
+        "familia": "Infernal",
+        "nivel": 1,
+        "descricao": "HP: 20; Tiny; Mobile. Move 3 spaces away after attacking.\nSlash. 1d8+4.\nI Offer You RICHES! (1 use) When an attacker would kill you: offer LVL gp. If accepted, you can't be harmed this round."
+    },
+    {
+        "nome": "Snakeman",
+        "tipo": "Normal",
+        "familia": "Homem-Cobra",
+        "nivel": 1,
+        "descricao": "HP: 26; Coiling Strike. On melee crit: Grapple (escape DC 10).\nSlash. 1d6+6 (or Spit, Range 8)."
+    },
+    {
+        "nome": "Tiny Mimic",
+        "tipo": "Normal",
+        "familia": "Monstruosidade",
+        "nivel": 1,
+        "descricao": "HP: 28; Ambusher. Mimics always start first and heroes roll Initiative with disadvantage.\nSticky. Mimic hits also Grapple.\nPseudopod. 1d4 (escape DC 9) OR: Bite (a Grappled creature) 1d12."
+    },
+    {
+        "nome": "Troglodyte Tunneler",
+        "tipo": "Normal",
+        "familia": "Troglodita",
+        "nivel": 1,
+        "descricao": "HP: 14; Overwhelming Stench. When rolling initiative VS Troglodytes, make a STR save instead.\nDeath Stench. On death: Poison adjacent enemies for 1 round.\nBurrower. Unseen until you attack (advantage on attacks when unseen). If not burrowed or grappling, burrow instead of attacking.\nFrom Below! 1d6+3 On hit: Grappled (escape DC 10)."
+    },
+    {
+        "nome": "Worg",
+        "tipo": "Normal",
+        "familia": "Fera",
+        "nivel": 1,
+        "descricao": "HP: 28; Large; Savage. Always crits when attacking a Grappled creature.\nRip Apart (2x). 1d6+2. On hit: Grappled (escape DC 10)."
+    },
+    {
         "nome": "Bandit Assassin",
         "tipo": "Normal",
+        "familia": "Bandido",
         "nivel": 2,
         "descricao": "HP: 24; Parry. Treat attacks against you that roll 2 as a miss.\nSneak. You are invisible until you attack.\nPoison Blade (2x). 1d8+2. On damage: Dazed."
     },
     {
         "nome": "Bandit Bruiser",
         "tipo": "Normal",
+        "familia": "Bandido",
         "nivel": 2,
         "descricao": "HP: 24; Parry. Treat attacks against you that roll 2 as a miss.\nBash. 2d8+4."
     },
     {
-        "nome": "Bandit Mage",
-        "tipo": "Normal",
-        "nivel": 4,
-        "descricao": "HP: 41; Parry. Treat attacks against you that roll 2 as a miss.\nSpark Step. When damaged, teleport up to 4 spaces.\nArc Lightning. 3d8 (Range 12). Also strikes the next closest creature. On miss: damage self instead."
-    },
-    {
-        "nome": "Bandit Captain",
-        "tipo": "Normal",
-        "nivel": 4,
-        "descricao": "HP: 36; Parry. Treat attacks against you that roll 2 as a miss.\nSlice (3x). 1d8+1 (or Shoot, Range 8)."
-    },
-    {
-        "nome": "Snakeman Minion",
-        "tipo": "Minion",
-        "nivel": 0.25,
-        "descricao": "Coiling Strike. On melee crit: Grapple (escape DC 10).\nStrike. 1d6 melee/ranged (follows minion rules)."
-    },
-    {
-        "nome": "Snakeman",
-        "tipo": "Normal",
-        "nivel": 1,
-        "descricao": "HP: 26; Coiling Strike. On melee crit: Grapple (escape DC 10).\nSlash. 1d6+6 (or Spit, Range 8)."
-    },
-    {
-        "nome": "Cobra Captain",
-        "tipo": "Normal",
-        "nivel": 4,
-        "descricao": "HP: 36; Coiling Strike. On melee crit: Grapple (escape DC 10).\nSlash (2x). 1d6+6 (or Spit, Range 8)."
-    },
-    {
-        "nome": "Giant Cobra",
-        "tipo": "Normal",
-        "nivel": 8,
-        "descricao": "HP: 80; Large; Coiling Strike. On melee crit: Grapple (escape DC 10).\nCrush. 2d6+20. Advantage vs. smaller creatures."
-    },
-    {
-        "nome": "Stirge",
-        "tipo": "Normal",
-        "nivel": 0.5,
-        "descricao": "HP: 10; Tiny; Evasive Flier. Attacks against stirges are made with disadvantage.\nLatch On. 1d4+2. On hit: Latched On."
-    },
-    {
-        "nome": "Greater Stirge",
-        "tipo": "Normal",
-        "nivel": 6,
-        "descricao": "HP: 60; Small; Evasive Flier. Attacks against stirges are made with disadvantage.\nLatch On. 1d12+10. On hit: Latched On.\nLatched On. You move where your target moves until either dies. Your attacks can't miss. Attacks that miss you damage your target instead."
-    },
-    {
-        "nome": "Tiny Mimic",
-        "tipo": "Normal",
-        "nivel": 1,
-        "descricao": "HP: 28; Ambusher. Mimics always start first and heroes roll Initiative with disadvantage.\nSticky. Mimic hits also Grapple.\nPseudopod. 1d4 (escape DC 9) OR: Bite (a Grappled creature) 1d12."
-    },
-    {
-        "nome": "Small Mimic",
-        "tipo": "Normal",
-        "nivel": 2,
-        "descricao": "HP: 41; Ambusher. Mimics always start first and heroes roll Initiative with disadvantage.\nSticky. Mimic hits also Grapple.\nPseudopod. 1d6 (escape DC 11) OR: Bite (a Grappled creature) 1d20."
-    },
-    {
-        "nome": "Medium Mimic",
-        "tipo": "Normal",
-        "nivel": 6,
-        "descricao": "HP: 79; Ambusher. Mimics always start first and heroes roll Initiative with disadvantage.\nSticky. Mimic hits also Grapple and can Grapple any number of creatures. When crit: release 1 creature.\nPseudopod. 1d8 (escape DC 13) OR: Bite (a Grappled creature) 2d20."
-    },
-    {
-        "nome": "Gray Ooze",
-        "tipo": "Normal",
-        "nivel": 1,
-        "descricao": "HP: 28; Digestive Touch. Contact with an ooze inflicts the Digested condition: they deal an additional X damage for each time the target has been Digested this encounter.\nAcidic Touch (2x). 1d6+2."
-    },
-    {
-        "nome": "Ochre Jelly",
-        "tipo": "Normal",
-        "nivel": 4,
-        "descricao": "HP: 52; Large; Digestive Touch. Contact with an ooze inflicts the Digested condition.\nAcidic Touch (2x). 1d6+3."
-    },
-    {
-        "nome": "Black Pudding",
-        "tipo": "Normal",
-        "nivel": 8,
-        "descricao": "HP: 90; Large; Digestive Touch. Contact with an ooze inflicts the Digested condition.\nAcidic Touch (2x). (Reach 2) 1d6+5."
-    },
-    {
-        "nome": "Elder Ooze",
-        "tipo": "Normal",
-        "nivel": 12,
-        "descricao": "HP: 150; Huge; Digestive Touch. Contact with an ooze inflicts the Digested condition.\nGoopy. When crit or dealt any slashing damage: summon X ooze minions (size: d6); their attacks inflict Digested.\nAcidic Touch (3x) (Reach 3) 1d6+6."
-    },
-    {
-        "nome": "Gnoll",
-        "tipo": "Normal",
-        "nivel": 1,
-        "descricao": "HP: 28; Frenzy. Advantage against Bloodied creatures.\n• Ravage (2x). 1d10. OR: • Shoot. (Range 12) 1d10."
-    },
-    {
-        "nome": "Gnoll Packleader",
-        "tipo": "Normal",
-        "nivel": 4,
-        "descricao": "HP: 39; Frenzy. Advantage against Bloodied creatures.\n• Bark Orders. 2 allies can move. Then:\n• Ravage (3x). 1d10."
-    },
-    {
-        "nome": "Worg",
-        "tipo": "Normal",
-        "nivel": 1,
-        "descricao": "HP: 28; Large; Savage. Always crits when attacking a Grappled creature.\nRip Apart (2x). 1d6+2. On hit: Grappled (escape DC 10)."
-    },
-    {
-        "nome": "Bulette",
-        "tipo": "Normal",
-        "nivel": 10,
-        "descricao": "HP: 74; Large; Burst Forth! Combat with a Bulette starts with the heaviest character making a DC 14 DEX save or they are Grappled (escape DC 14) and take 1d12+20 damage (half on save).\n• Drag Below. (A Grappled creature) 2d12 then drag below and burrow away. OR:\n• Leap & Bite. (If not grappling) leap 6, and attack for 1d12+20. On hit: Grappled."
-    },
-    {
-        "nome": "Hill Giant",
-        "tipo": "Normal",
-        "nivel": 12,
-        "descricao": "HP: 140; Huge; Brute. On hit: Knockback Primary Die spaces.\n• Smash (2x). (Reach 2) 1d6+15. OR:\n• Boulder! (Range 12) 1d6+20."
-    },
-    {
-        "nome": "Troll",
-        "tipo": "Normal",
-        "nivel": 10,
-        "descricao": "HP: 100; Large; Regenerate. Does not die at 0 HP. Only fire, radiant, or a crit while at 0 HP can kill it.\nChoose twice:\n• Claws. (Reach 2) 1d4+10. On crit: Prone.\n• Bite. (A Prone creature) 1d4+20."
-    },
-    {
         "nome": "Blue Drake",
         "tipo": "Normal",
+        "familia": "Dragão",
         "nivel": 2,
         "descricao": "HP: 34; Shocking Bite. 1d12+5 (ignores metal armor).\nOn Death. Deal 1d12 damage back (ignores metal armor)."
     },
     {
-        "nome": "Griffon",
+        "nome": "Bugbear",
         "tipo": "Normal",
-        "nivel": 4,
-        "descricao": "HP: 50; Large; • Talons. 2d6+10, on hit: Grappled (escape DC 14) OR:\n• Fly & Drop. (if grappling) Fly upward 12 and release (6d6 fall damage)."
-    },
-    {
-        "nome": "Roc",
-        "tipo": "Normal",
-        "nivel": 17,
-        "descricao": "HP: 195; Gargantuan; • Pluck Up. (Reach 4, target up to 2 creatures) 3d12+20. On hit: Grappled (escape DC 18). OR:\n• Crush & Drop. Fly upward 20 spaces, deal 20 damage to Grappled creatures, then release (10d6 fall damage)."
-    },
-    {
-        "nome": "Skeleton",
-        "tipo": "Normal",
-        "nivel": 0.25,
-        "descricao": "HP: 10; Unliving, Undying. The first time this dies, reset to 1 HP instead (excluding minions).\nGrave Arrow. 1d4+3 (Range 8)."
-    },
-    {
-        "nome": "Zombie",
-        "tipo": "Normal",
-        "nivel": 0.5,
-        "descricao": "HP: 15; Unliving, Undying. The first time this dies, reset to 1 HP instead (excluding minions).\nCrunch. 1d4+4 On damage: Grappled."
-    },
-    {
-        "nome": "Ghoul",
-        "tipo": "Normal",
-        "nivel": 1,
-        "descricao": "HP: 20; Unliving, Undying. The first time this dies, reset to 1 HP instead (excluding minions).\nSickening Claw. 1d4+8. On damage: Dazed."
-    },
-    {
-        "nome": "Specter",
-        "tipo": "Normal",
-        "nivel": 3,
-        "descricao": "HP: 30; Unliving, Undying. The first time this dies, reset to 1 HP instead (excluding minions).\nDeathly Touch. 1d4. On damage: set HP to 0."
-    },
-    {
-        "nome": "Ogre Zombie",
-        "tipo": "Normal",
-        "nivel": 5,
-        "descricao": "HP: 46; Large; Unliving, Undying. The first time this dies, reset to 1 HP instead (excluding minions).\nGreatclub (2x). 1d4+8. On crit: Prone."
-    },
-    {
-        "nome": "Mummy",
-        "tipo": "Normal",
-        "nivel": 6,
-        "descricao": "HP: 54; Unliving, Undying. The first time this dies, reset to 1 HP instead (excluding minions).\nSlam (2x). 1d4+8. On damage: Dazed."
-    },
-    {
-        "nome": "Giant Zombie",
-        "tipo": "Normal",
-        "nivel": 8,
-        "descricao": "HP: 73; Huge; Unliving, Undying. The first time this dies, reset to 1 HP instead (excluding minions).\nDecaying Swipe (2x). 1d4+10. On damage: knockback Primary Die spaces."
-    },
-    {
-        "nome": "Wraith",
-        "tipo": "Normal",
-        "nivel": 10,
-        "descricao": "HP: 94; Unliving, Undying. The first time this dies, reset to 1 HP instead (excluding minions).\nSoul Rend (2x). (Range 8) 1d4+10. On damage: deal 1 Wound."
-    },
-    {
-        "nome": "Mummy Lord",
-        "tipo": "Normal",
-        "nivel": 21,
-        "descricao": "HP: 280; Cursed Gaze. When crit: DC 20 INT save, or suffer 1 Wound.\n• Scarab Swarm. Summon 10 scarab minions (d6) within 6 spaces. Then:\n• Slam (2x). 1d4+20 On damage: Dazed."
-    },
-    {
-        "nome": "Duskprowler",
-        "tipo": "Normal",
-        "nivel": 6,
-        "descricao": "HP: 70; Large; Illusory Aura. Attacks against the Duskprowler have Disadvantage 2. Damage supresses this effect until the end of the next hero's turn.\nRavage (2x). 2d8+2."
-    },
-    {
-        "nome": "Basilisk",
-        "tipo": "Normal",
-        "nivel": 7,
-        "descricao": "HP: 48; Flesh to Stone. Creatures Dazed by the Basilisk remain so for 10 minutes. Dazed 3 times = Petrified.\n• Stone Gaze. Daze 1 creature within sight, then:\n• Envenom. 1d8+10, advantage vs Dazed targets."
-    },
-    {
-        "nome": "Druid",
-        "tipo": "Normal",
-        "nivel": 8,
-        "descricao": "HP: 90; • Beastshift. +4 speed, gain Medium armor this round. 4d4+10. OR:\n• Hurricane. (Reach 3) 4d4+10 to all enemies within reach. On damage: move targets anywhere else in Reach."
-    },
-    {
-        "nome": "Seedling",
-        "tipo": "Normal",
-        "nivel": 0.5,
-        "descricao": "HP: 8; Small; Peeling Bark. Damage degrades Armor 1 step: Heavy » Medium >> None.\nThorn Seed. (Range 6) 2d6+2."
-    },
-    {
-        "nome": "Acidpod",
-        "tipo": "Normal",
-        "nivel": 1,
-        "descricao": "HP: 8; Small; Peeling Bark. Damage degrades Armor 1 step: Heavy » Medium >> None.\nCaustic Eruption. On death: 4d6 acid damage to ALL adjacent creatures.\nGrab. DC 12 DEX save or Grappled."
-    },
-    {
-        "nome": "Tangler",
-        "tipo": "Normal",
+        "familia": "Goblin",
         "nivel": 2,
-        "descricao": "HP: 20; Peeling Bark. Damage degrades Armor 1 step: Heavy » Medium >> None.\nTangle (2x). (Reach 6) 1d6+2. On hit: Grappled (escape DC 12, or any fire or slashing damage)."
+        "descricao": "HP: 30; • Cleave. 2d6+4. OR:\n• Javelin. 1d6+2 (Range 8)."
     },
     {
-        "nome": "Rootbreaker",
+        "nome": "Faerie",
         "tipo": "Normal",
-        "nivel": 5,
-        "descricao": "HP: 50; Large; Peeling Bark. Damage degrades Armor 1 step: Heavy » Medium >> None.\nSlam. 3d6+6 On crit: knockback 2."
-    },
-    {
-        "nome": "Treant",
-        "tipo": "Normal",
-        "nivel": 14,
-        "descricao": "HP: 170; Huge; Enrage. Attack with advantage when unarmored.\nChoose twice: • Slam. (Reach 3) 2d6+10. On damage: Prone.\n• Stomp. (Hampered target) 2d6+20."
-    },
-    {
-        "nome": "Cultist",
-        "tipo": "Normal",
-        "nivel": 1,
-        "descricao": "HP: 28; Fanatical Zeal. While not at max HP, make all rolls with advantage. Your crits also inflict Despair.\n• Oblation of Blood! If undamaged, attack self for 2 damage. Adjacent enemies are inflicted with Despair. OR:\n• Dreadful Blade. 1d6+6."
-    },
-    {
-        "nome": "Fanatic",
-        "tipo": "Normal",
-        "nivel": 3,
-        "descricao": "HP: 41; Fanatical Zeal. While not at max HP, make all rolls with advantage. Your crits also inflict Despair.\n• Oblation of Blood! If undamaged, attack self for 2 damage. Adjacent enemies are inflicted with Despair. OR:\n• Blood Boil. (Range 12, Bloodied creature) 3d6+6."
-    },
-    {
-        "nome": "Doomsayer",
-        "tipo": "Normal",
-        "nivel": 5,
-        "descricao": "HP: 58; Despair. Disadvantage on the next attack you make this encounter.\n• Feverish Chant. (Concentration) Reduce all damage done to allies who can hear you to 1. OR:\n• Ecstatic Ravings. 2d6 psychic damage to all enemies who can hear you."
-    },
-    {
-        "nome": "Stenchling",
-        "tipo": "Normal",
-        "nivel": 0.5,
-        "descricao": "HP: 18; Small; Putrid Cloud. On Death: 2d6 poison damage to enemies within Reach 2.\nBite. 2d6."
-    },
-    {
-        "nome": "Spiny Fiend",
-        "tipo": "Normal",
-        "nivel": 4,
-        "descricao": "HP: 49; Spines. Melee attackers take 3 damage.\n• Claws (2x) 1d6+6. OR:\n• Shoot Spine. (Range 12) 1d6+6."
-    },
-    {
-        "nome": "Glabrezu",
-        "tipo": "Normal",
-        "nivel": 14,
-        "descricao": "HP: 110; Large; • Doomclaw (2x). (Reach 2) 3d6+10. On damage: Grappled (escape DC 17). If the same creature is Grappled by both of the glabrezu's claws, it must escape from each of them separately. OR:\n• Tear Asunder. (A creature Grappled by both of the glabrezu's claws) 50 unpreventable damage. If the target is at 0 HP: DC 17 STR save or be torn in two, dying instantly."
+        "familia": "Fada",
+        "nivel": 2,
+        "descricao": "HP: 20; Tiny; Spritely Evasion: Attacks against Faeries are rolled with disadvantage and miss on 2 or less.\nTricksy Magic. (Range 6) 1d4+10 psychic damage."
     },
     {
         "nome": "Giant Spider",
         "tipo": "Normal",
+        "familia": "Aranha",
         "nivel": 2,
         "descricao": "HP: 27; • Shoot Web. (Range 6) 1d8+2 On hit: Restrained (escape DC 12, or any slashing/fire damage). OR:\n• Bite. (Hampered target) 2d8+4 Poisoned (magical healing ends)."
     },
     {
-        "nome": "Cloaker",
+        "nome": "Goblin Ratrider",
         "tipo": "Normal",
-        "nivel": 13,
-        "descricao": "HP: 110; Large; Ambusher. Cloakers always start first and heroes roll Initiative with disadvantage.\nMutual Harm. You take half damage from attacks while grappling a creature (they take the other half).\n• Wrap. 2d10+20. On Hit: Grappled (escape DC 16). OR:\n• Horrifying Wail. DC 16 WIL save, or creatures within 6 spaces are Frightened and must spend 1 Action moving as far away as possible."
+        "familia": "Goblin",
+        "nivel": 2,
+        "descricao": "HP: 30; CHAAARGE! If you move at least 4 spaces in a straight line, attack with advantage once.\nBite & Stab (2x). 1d6+2. On crit: Prone."
     },
     {
-        "nome": "Ettercap",
+        "nome": "Goblin Taskmaster",
         "tipo": "Normal",
-        "nivel": 4,
-        "descricao": "HP: 49; Web Garrote. 1d8+2 On hit: Grappled (escape DC 13), Silenced until target escapes."
+        "familia": "Goblin",
+        "nivel": 2,
+        "descricao": "HP: 30; Small; Meat Shield. Can force other goblins to Interpose for him.\n• Stab. 1d6+2 (or Shoot, Range 8). Then:\n• Get in here! Call a goblin minion to the fight."
     },
     {
-        "nome": "Nestweaver",
+        "nome": "Grumbulus",
         "tipo": "Normal",
-        "nivel": 6,
-        "descricao": "HP: 54; Large; Summon 2 spider minions (d8). Then choose 1:\n• Shoot Web. (Range 6) 1d8+2 On hit: Restrained (escape DC 12, or any slashing/fire damage). OR:\n• Bite. (Hampered target) 3d8+6 and Poisoned (magical healing ends)."
+        "familia": "Infernal",
+        "nivel": 2,
+        "descricao": "HP: 32; Small; Gnash. 2d8+4.\nI Offer You SECRETS! (1 use) When an attacker would kill you: offer control of a random Fiend on their next turn. If accepted, you can't be harmed this round."
     },
     {
-        "nome": "Great Worm",
+        "nome": "Imp",
         "tipo": "Normal",
-        "nivel": 16,
-        "descricao": "HP: 140; Huge; Tremor Sight. Advantage against creatures that moved since the worm's last turn.\n• Crush. Creatures in a 2x6 area take 50 damage on a failed DC 18 DEX save. OR:\n• Bite/Swallow. 1d4+40. On crit: Swallowed. (Swallowed: You take 20 damage at the start of your turn)."
-    },
-    {
-        "nome": "Umber Hulk",
-        "tipo": "Normal",
-        "nivel": 10,
-        "descricao": "HP: 70; Large; Confounding Pheromones. Enemies make a DC 15 WIL save at the start of their turns or Confused this turn.\nMandible & Claws (2x). 1d10+10 damage."
+        "familia": "Infernal",
+        "nivel": 2,
+        "descricao": "HP: 34; Small; Cowardly. Advantage on attacks when an ally is adjacent, Disadvantage otherwise.\nSting. 1d6+6.\nHorrid Screech. (Reach 6) 20 psychic damage (ignoring armor), enemies are also Dazed on a failed DC 15 STR save. (Reach 18) 10 damage instead and advantage on the save."
     },
     {
         "nome": "Pudge the Blunderer",
         "tipo": "Lendario",
+        "familia": "Monstruosidade",
         "nivel": 2,
         "descricao": "HP: 75; ACTIONS: After each hero's turn, choose one:\n• Move & Smack. Move 8, attack for 1d8+2. On damage: Prone.\n• Grab & Throw. 1d8+2 on damage: they are thrown at another hero within 6 spaces. Both make a DC 12 DEX save or take 1d8+2 damage and are knocked Prone, half damage on save.\nBLOODIED: At 37 HP, Pudge's damage increases to 1d12+2.\nLAST STAND: Pudge is dying! 20 more damage and he dies. Until then, Pudge can move 6 spaces, and use Grab & Throw each turn."
     },
     {
-        "nome": "Kelebek, Entomancer",
-        "tipo": "Lendario",
-        "nivel": 3,
-        "descricao": "HP: 60; Vinelash. Move 6, then 2d6. On damage: move target to an unoccupied space within 10 spaces.\nACTIONS: After each hero's turn, choose Kelebek OR Poppy to act.\nBLOODIED: When Kelebek is reduced to 30 HP, Poppy always Interposes for him.\nLAST STAND: When Poppy dies, the room is filled with noxious gas: all heroes have a maximum of 2 actions each turn."
+        "nome": "Small Mimic",
+        "tipo": "Normal",
+        "familia": "Monstruosidade",
+        "nivel": 2,
+        "descricao": "HP: 41; Ambusher. Mimics always start first and heroes roll Initiative with disadvantage.\nSticky. Mimic hits also Grapple.\nPseudopod. 1d6 (escape DC 11) OR: Bite (a Grappled creature) 1d20."
     },
     {
-        "nome": "Poppy, Giant Stinkbug",
-        "tipo": "Lendario",
+        "nome": "Swamp Raptor",
+        "tipo": "Normal",
+        "familia": "Fera",
+        "nivel": 2,
+        "descricao": "HP: 28; Pack Tactics. Advantage when an ally is adjacent to target.\nPounce. 1d8+10. On crit: Prone & Restrained (Escape DC 10, or any damage to the Raptor)."
+    },
+    {
+        "nome": "Tangler",
+        "tipo": "Normal",
+        "familia": "Planta",
+        "nivel": 2,
+        "descricao": "HP: 20; Peeling Bark. Damage degrades Armor 1 step: Heavy » Medium >> None.\nTangle (2x). (Reach 6) 1d6+2. On hit: Grappled (escape DC 12, or any fire or slashing damage)."
+    },
+    {
+        "nome": "Troglodyte Muckthrower",
+        "tipo": "Normal",
+        "familia": "Troglodita",
+        "nivel": 2,
+        "descricao": "HP: 20; Overwhelming Stench. When rolling initiative VS Troglodytes, make a STR save instead.\nDeath Stench. On death: Poison adjacent enemies for 1 round.\nBurrower. Unseen until you attack. If not burrowed or grappling, burrow instead of attacking.\nFrom Below! 1d6+3. On hit: Poisoned."
+    },
+    {
+        "nome": "Arbalest Scion",
+        "tipo": "Normal",
+        "familia": "Constructo",
         "nivel": 3,
-        "descricao": "HP: 60; Stink Cloud. When damaged, enemies within 2 spaces make a STR save (DC equal to the higher of 10 or the damage done). On a failure, they must spend their next action vomiting, and they cannot take reactions this round.\nCrushing Mandibles. Move 6. 4d6 damage, up to 2 adjacent creatures."
+        "descricao": "HP: 40; Mana Charged. After mana is spent, the closest mana construct MUST attack a target within Range/Reach.\nShoot. (Range 8) 1d6+10 damage OR:\n• Finishing Move. Deal 20 damage to an adjacent Prone enemy."
+    },
+    {
+        "nome": "Faerie Troubadour",
+        "tipo": "Normal",
+        "familia": "Fada",
+        "nivel": 3,
+        "descricao": "HP: 26; Tiny; Spritely Evasion: Attacks against Faeries are rolled with disadvantage and miss on 2 or less.\nInvigorating Presence. (Reach 4) Fey gain medium armor and advantage on attacks.\nClamorous Chorus. (Reach 4) Enemies make a WIL save, each takes 15 psychic damage minus the results of the save."
+    },
+    {
+        "nome": "Fanatic",
+        "tipo": "Normal",
+        "familia": "Cultista",
+        "nivel": 3,
+        "descricao": "HP: 41; Fanatical Zeal. While not at max HP, make all rolls with advantage. Your crits also inflict Despair.\n• Oblation of Blood! If undamaged, attack self for 2 damage. Adjacent enemies are inflicted with Despair. OR:\n• Blood Boil. (Range 12, Bloodied creature) 3d6+6."
+    },
+    {
+        "nome": "Gremlin",
+        "tipo": "Normal",
+        "familia": "Fada",
+        "nivel": 3,
+        "descricao": "HP: 38; Small; Come Get Some! If no heroes are Taunted, a Gremlin may Taunt all heroes for 1 Round.\nWeeee! 1d6+10. Then, if target is Small size or larger, Ride (escape DC 10). (If an attack misses a Gremlin that is Riding a hero, it hits the hero they're Riding instead)."
     },
     {
         "nome": "Grimbeak, the Unyielding",
         "tipo": "Lendario",
+        "familia": "Monstruosidade",
         "nivel": 3,
         "descricao": "HP: 100; Brutal. Treat the highest die rolled as the Primary Die. On crit: knock Prone.\nACTIONS: After each hero's turn, choose one:\n• Savage Screech. (1 use) All enemies within reach 12 suffer 2d6 damage (ignoring armor). DC 11 WIL save or become Frightened for 1 round.\n• Rend & Tear. Attack for 2d6+10 damage.\n• Beak. Move 8. Attack for 2d6 damage.\nBLOODIED: At 50 HP, Savage Screech recharges.\nLAST STAND: Grimbeak is dying! 30 more damage and she dies. Until then, her Attacks use d10s instead of d6s."
     },
     {
+        "nome": "Halberdier Scion",
+        "tipo": "Normal",
+        "familia": "Constructo",
+        "nivel": 3,
+        "descricao": "HP: 50; Mana Charged. After mana is spent, the closest mana construct MUST attack a target within Range/Reach.\nExecute. (Reach 2) 1d20, advantage at Reach 2, disadvantage otherwise. On 18+: Prone."
+    },
+    {
+        "nome": "Kelebek, Entomancer",
+        "tipo": "Lendario",
+        "familia": "Humanoide",
+        "nivel": 3,
+        "descricao": "HP: 60; Vinelash. Move 6, then 2d6. On damage: move target to an unoccupied space within 10 spaces.\nACTIONS: After each hero's turn, choose Kelebek OR Poppy to act.\nBLOODIED: When Kelebek is reduced to 30 HP, Poppy always Interposes for him.\nLAST STAND: When Poppy dies, the room is filled with noxious gas: all heroes have a maximum of 2 actions each turn."
+    },
+    {
+        "nome": "Lizardfolk Scalebreaker",
+        "tipo": "Normal",
+        "familia": "Homem-Lagarto",
+        "nivel": 3,
+        "descricao": "HP: 42; Muck Walkers. Double movement while in Muck. Cold-Blooded. Hit by Ice-based attack = Poisoned 1 round.\nBash. 2d8+2 +10 VS Hampered creatures."
+    },
+    {
+        "nome": "Orc Raider",
+        "tipo": "Normal",
+        "familia": "Orc",
+        "nivel": 3,
+        "descricao": "HP: 34; Battlelust. Heroes have disadvantage on Initiative against a band composed mostly of Orcs.\nTough as Nails. Medium armor, except against magic damage.\nEnrage. When crit: deal 5 damage to an adjacent enemy.\n• Twin Strike (2x) 1d10+4. OR: • Javelin. 1d6+4 (Range 8)."
+    },
+    {
+        "nome": "Pactmonger",
+        "tipo": "Normal",
+        "familia": "Infernal",
+        "nivel": 3,
+        "descricao": "HP: 40; • I Offer You POWER! (Reach 8) Offer a hero an additional Action. Then: • Reckoning. (Reach 8) 2d8+4; or twice as much if the target has accepted an Offer this round."
+    },
+    {
+        "nome": "Poppy, Giant Stinkbug",
+        "tipo": "Lendario",
+        "familia": "Fera",
+        "nivel": 3,
+        "descricao": "HP: 60; Stink Cloud. When damaged, enemies within 2 spaces make a STR save (DC equal to the higher of 10 or the damage done). On a failure, they must spend their next action vomiting, and they cannot take reactions this round.\nCrushing Mandibles. Move 6. 4d6 damage, up to 2 adjacent creatures."
+    },
+    {
+        "nome": "Specter",
+        "tipo": "Normal",
+        "familia": "Morto-Vivo",
+        "nivel": 3,
+        "descricao": "HP: 30; Unliving, Undying. The first time this dies, reset to 1 HP instead (excluding minions).\nDeathly Touch. 1d4. On damage: set HP to 0."
+    },
+    {
+        "nome": "Timberwolf",
+        "tipo": "Normal",
+        "familia": "Fera",
+        "nivel": 3,
+        "descricao": "HP: 40; Mangle. 1d4+10. Advantage VS bloodied creatures."
+    },
+    {
+        "nome": "Troglodyte Screecher",
+        "tipo": "Normal",
+        "familia": "Troglodita",
+        "nivel": 3,
+        "descricao": "HP: 30; Overwhelming Stench. When rolling initiative VS Troglodytes, make a STR save instead.\nDeath Stench. On death: Poison adjacent enemies for 1 round.\nScreech. (AoE, Reach 2) 1d6+3 and Daze. (AoEs do not miss or crit, and ignore armor)."
+    },
+    {
+        "nome": "Bandit Captain",
+        "tipo": "Normal",
+        "familia": "Bandido",
+        "nivel": 4,
+        "descricao": "HP: 36; Parry. Treat attacks against you that roll 2 as a miss.\nSlice (3x). 1d8+1 (or Shoot, Range 8)."
+    },
+    {
+        "nome": "Bandit Mage",
+        "tipo": "Normal",
+        "familia": "Bandido",
+        "nivel": 4,
+        "descricao": "HP: 41; Parry. Treat attacks against you that roll 2 as a miss.\nSpark Step. When damaged, teleport up to 4 spaces.\nArc Lightning. 3d8 (Range 12). Also strikes the next closest creature. On miss: damage self instead."
+    },
+    {
+        "nome": "Cobra Captain",
+        "tipo": "Normal",
+        "familia": "Homem-Cobra",
+        "nivel": 4,
+        "descricao": "HP: 36; Coiling Strike. On melee crit: Grapple (escape DC 10).\nSlash (2x). 1d6+6 (or Spit, Range 8)."
+    },
+    {
+        "nome": "Ettercap",
+        "tipo": "Normal",
+        "familia": "Aranha",
+        "nivel": 4,
+        "descricao": "HP: 49; Web Garrote. 1d8+2 On hit: Grappled (escape DC 13), Silenced until target escapes."
+    },
+    {
+        "nome": "Faerie Merrymaker",
+        "tipo": "Normal",
+        "familia": "Fada",
+        "nivel": 4,
+        "descricao": "HP: 38; Tiny; Spritely Evasion: Attacks against Faeries are rolled with disadvantage and miss on 2 or less.\nPrank Bomb. (Range 4) 2d4+10. On hit, choose 1: • Sticky Gum: Slowed for 1 Round. • Smelly Gas: Poisoned for 1 Round."
+    },
+    {
+        "nome": "Gnoll Packleader",
+        "tipo": "Normal",
+        "familia": "Gnoll",
+        "nivel": 4,
+        "descricao": "HP: 39; Frenzy. Advantage against Bloodied creatures.\n• Bark Orders. 2 allies can move. Then:\n• Ravage (3x). 1d10."
+    },
+    {
+        "nome": "Gremlin Wrestler",
+        "tipo": "Normal",
+        "familia": "Fada",
+        "nivel": 4,
+        "descricao": "HP: 46; Small; Come Get Some! If no heroes are Taunted, a Gremlin may Taunt all heroes for 1 Round.\nPunching Up: Can Grapple Large creatures.\nI'mma Mess You Up! 2d6+10. On hit: Grappled (escape DC 12). If Grappled, knock Prone as well."
+    },
+    {
+        "nome": "Griffon",
+        "tipo": "Normal",
+        "familia": "Monstruosidade",
+        "nivel": 4,
+        "descricao": "HP: 50; Large; • Talons. 2d6+10, on hit: Grappled (escape DC 14) OR:\n• Fly & Drop. (if grappling) Fly upward 12 and release (6d6 fall damage)."
+    },
+    {
+        "nome": "Lizardfolk Hunter",
+        "tipo": "Normal",
+        "familia": "Homem-Lagarto",
+        "nivel": 4,
+        "descricao": "HP: 34; Muck Walkers. Double movement while in Muck. Cold-Blooded. Hit by Ice-based attack = Poisoned 1 round.\nGotcha! (1 use) When an enemy moves adjacent, Restrain them with a net (escape DC 12, or any fire/slashing damage).\n• Javelin. (Range 8) 2d8+10 OR:\n• Club. 2d8."
+    },
+    {
+        "nome": "Lumbrax",
+        "tipo": "Normal",
+        "familia": "Infernal",
+        "nivel": 4,
+        "descricao": "HP: 50; Large; • I Offer You REPREIVE! If accepted, summon 3 minions (size:d8). If rejected Brutalize:\n• Brutalize. 2d20 damage."
+    },
+    {
+        "nome": "Ochre Jelly",
+        "tipo": "Normal",
+        "familia": "Limo",
+        "nivel": 4,
+        "descricao": "HP: 52; Large; Digestive Touch. Contact with an ooze inflicts the Digested condition.\nAcidic Touch (2x). 1d6+3."
+    },
+    {
+        "nome": "Orc Battlebard",
+        "tipo": "Normal",
+        "familia": "Orc",
+        "nivel": 4,
+        "descricao": "HP: 50; Battlelust. Heroes have disadvantage on Initiative against a band composed mostly of Orcs.\nTough as Nails. Medium armor, except against magic damage.\nEnrage. When crit: deal 5 damage to an adjacent enemy.\nStand Your Ground! Allied Orcs attacks with advantage so long as you have not moved (or been moved) since your last turn.\nBattle Horn (1/encounter). Trigger every allied Orc's Enrage ability."
+    },
+    {
+        "nome": "Spiny Fiend",
+        "tipo": "Normal",
+        "familia": "Infernal",
+        "nivel": 4,
+        "descricao": "HP: 49; Spines. Melee attackers take 3 damage.\n• Claws (2x) 1d6+6. OR:\n• Shoot Spine. (Range 12) 1d6+6."
+    },
+    {
         "nome": "Thorn Quickblade",
         "tipo": "Lendario",
+        "familia": "Bandido",
         "nivel": 4,
         "descricao": "HP: 125; Strike Back. When crit, make a Heart Piercer or Stormquill attack in return.\nACTIONS: After each hero's turn, choose one:\n• Stormquill (Crossbow). Move 4, 4d4+10 damage (Range 8).\n• Heart Piercer (Rapier). Move 8, 2d4+3 damage. On crit: Dazed.\nBLOODIED: Smoke Bomb. At 62 HP, Thorn immediately becomes invisible (until the end of his next turn), then moves 8, ignoring opportunity attacks.\nLAST STAND: Mortal Panic! Thorn is dying! 30 more damage and he's dead! Until then he'll Strike Back EVERY time he's hit (1/turn)."
     },
     {
+        "nome": "Troglodyte Champion",
+        "tipo": "Normal",
+        "familia": "Troglodita",
+        "nivel": 4,
+        "descricao": "HP: 40; Overwhelming Stench. When rolling initiative VS Troglodytes, make a STR save instead.\nDeath Stench. On death: Poison adjacent enemies for 1 round.\nSpiked Club. 3d6+9."
+    },
+    {
+        "nome": "Troglodyte Stenchmaster",
+        "tipo": "Normal",
+        "familia": "Troglodita",
+        "nivel": 4,
+        "descricao": "HP: 40; Overwhelming Stench. When rolling initiative VS Troglodytes, make a STR save instead.\nDeath Stench. On death: Poison adjacent enemies for 1 round.\nPervading Stench. (AoE, Reach 12) 1d6+3 to all enemies, they are Dazed and Poisoned for 1 turn."
+    },
+    {
+        "nome": "Bladed Scion",
+        "tipo": "Normal",
+        "familia": "Constructo",
+        "nivel": 5,
+        "descricao": "HP: 60; Mana Charged. After mana is spent, the closest mana construct MUST attack a target within Range/Reach.\nFlurry. 3d6, also damages the next closest target within Reach.\nOn Death. 1 enemy gains advantage on their next attack."
+    },
+    {
+        "nome": "Doomsayer",
+        "tipo": "Normal",
+        "familia": "Cultista",
+        "nivel": 5,
+        "descricao": "HP: 58; Despair. Disadvantage on the next attack you make this encounter.\n• Feverish Chant. (Concentration) Reduce all damage done to allies who can hear you to 1. OR:\n• Ecstatic Ravings. 2d6 psychic damage to all enemies who can hear you."
+    },
+    {
+        "nome": "Ogre Zombie",
+        "tipo": "Normal",
+        "familia": "Morto-Vivo",
+        "nivel": 5,
+        "descricao": "HP: 46; Large; Unliving, Undying. The first time this dies, reset to 1 HP instead (excluding minions).\nGreatclub (2x). 1d4+8. On crit: Prone."
+    },
+    {
         "nome": "Ravager of the Lowlands",
         "tipo": "Lendario",
+        "familia": "Monstruosidade",
         "nivel": 5,
         "descricao": "HP: 130; Large; Feral Instinct. Whenever Ravager is crit, he can fly 10.\nACTIONS: After each hero's turn, choose one:\n• Venomous Stinger. (1 use) Reach 3, 5d12 damage.\n• Ravage. Attack for 1d12+20 damage.\n• Claw. Fly 10, attack for 1d12+6 damage.\nBLOODIED: At 65 HP, his Venomous Stinger recharges.\nLAST STAND: The Ravager is dying! 40 more damage and he dies. Until then, the first time each turn he takes damage, he uses Move & Claw."
     },
     {
-        "nome": "Queen Aranya, Broodmother",
-        "tipo": "Lendario",
+        "nome": "Rootbreaker",
+        "tipo": "Normal",
+        "familia": "Planta",
+        "nivel": 5,
+        "descricao": "HP: 50; Large; Peeling Bark. Damage degrades Armor 1 step: Heavy » Medium >> None.\nSlam. 3d6+6 On crit: knockback 2."
+    },
+    {
+        "nome": "Drow Warrior",
+        "tipo": "Normal",
+        "familia": "Elfo Negro",
         "nivel": 6,
-        "descricao": "HP: 160; Large; Weave Web. Creatures she hits are entangled in a sticky web (Dazed).\nFlammable Webs. Fire critical hits suppress the Broodmother's Weave Web for 1 turn.\nACTIONS: After each hero's turn, choose one:\n• Impale. (Reach 2) 2d8+8 damage. Then skitter away up to 8 spaces.\n• Hatch Brood. Summon spiderling minions (1/hero, size:d8); they act only when commanded.\n• Dinner Time! Command all of your spiderling minions to move up to 6 spaces and attack once each.\nBLOODIED: \"Avenge Your Queen, My Brood!\" At 80 HP, summon 3 spiderling minions/hero anywhere within Reach 8.\nLAST STAND: Aranya is dying! 40 more damage and she dies. Until then, Hatch Brood after each of her turns."
+        "descricao": "HP: 34; Ambush Combatants. Drow always go first in combat (unless surprised).\nCruel Poisoners. On Damage, Poisoned (healing ends). Roll d20s instead VS Hampered creatures.\n• Blade Flurry. (2x) 2d8 OR:\n• Poisoned Crossbow. (Range 8) 2d8."
+    },
+    {
+        "nome": "Duskprowler",
+        "tipo": "Normal",
+        "familia": "Monstruosidade",
+        "nivel": 6,
+        "descricao": "HP: 70; Large; Illusory Aura. Attacks against the Duskprowler have Disadvantage 2. Damage supresses this effect until the end of the next hero's turn.\nRavage (2x). 2d8+2."
+    },
+    {
+        "nome": "Faerie Trickmage",
+        "tipo": "Normal",
+        "familia": "Fada",
+        "nivel": 6,
+        "descricao": "HP: 50; Tiny; Spritely Evasion: Attacks against Faeries are rolled with disadvantage and miss on 2 or less.\nStop Hitting Yourselves! Reaction, 1/Round. (Reach 4) Swap the position of two creatures.\nIllusory Assault. (Reach 4) Create 3 illusory fey minions (d4) in empty spaces adjacent to a hero. They attack immediately.\nAdvantage. If a minion would attack with advantage, increment their die one step instead."
+    },
+    {
+        "nome": "Gargoyle",
+        "tipo": "Normal",
+        "familia": "Monstruosidade",
+        "nivel": 6,
+        "descricao": "HP: 41; Crush. 1d4 (with disadvantage). On hit: +30 damage and Prone."
+    },
+    {
+        "nome": "Greater Stirge",
+        "tipo": "Normal",
+        "familia": "Fera",
+        "nivel": 6,
+        "descricao": "HP: 60; Small; Evasive Flier. Attacks against stirges are made with disadvantage.\nLatch On. 1d12+10. On hit: Latched On.\nLatched On. You move where your target moves until either dies. Your attacks can't miss. Attacks that miss you damage your target instead."
+    },
+    {
+        "nome": "Gremlin Roastmaster",
+        "tipo": "Normal",
+        "familia": "Fada",
+        "nivel": 6,
+        "descricao": "HP: 68; Small; Come Get Some! If no heroes are Taunted, a Gremlin may Taunt all heroes for 1 Round.\nTake a look as this tough guy!. (Reach 6) Heroes that miss attacks suffer 5 psychic damage.\nCheap Shot. 1d6+10. If target is Hampered, deal 20 damage instead."
+    },
+    {
+        "nome": "Hookspawn",
+        "tipo": "Normal",
+        "familia": "Infernal",
+        "nivel": 6,
+        "descricao": "HP: 68; Large; Rend (2x). 1d6+6. On damage: Lacerated.\nLacerated. Suffer 1 damage for each space you move (or are moved). Healing or a DC 15 Examination check ends."
+    },
+    {
+        "nome": "Justiciar",
+        "tipo": "Normal",
+        "familia": "Infernal",
+        "nivel": 6,
+        "descricao": "HP: 70; Large; Infernal Edict. When damaged by the Justicar, enemies MUST accept the next Offer they receive. Enemies suffer 5 damage whenever they act while it is not their turn.\nCruel Judgment. (Reach 6) 1d20+5."
+    },
+    {
+        "nome": "Lizardfolk Broodguard",
+        "tipo": "Normal",
+        "familia": "Homem-Lagarto",
+        "nivel": 6,
+        "descricao": "HP: 54; Muck Walkers. Double movement while in Muck. Cold-Blooded. Hit by Ice-based attack = Poisoned 1 round.\nSwift Defense. (1/round) Can Interpose within Reach 4.\nShell Bash. 2d8+10. On Crit: Dazed."
+    },
+    {
+        "nome": "Medium Mimic",
+        "tipo": "Normal",
+        "familia": "Monstruosidade",
+        "nivel": 6,
+        "descricao": "HP: 79; Ambusher. Mimics always start first and heroes roll Initiative with disadvantage.\nSticky. Mimic hits also Grapple and can Grapple any number of creatures. When crit: release 1 creature.\nPseudopod. 1d8 (escape DC 13) OR: Bite (a Grappled creature) 2d20."
+    },
+    {
+        "nome": "Mummy",
+        "tipo": "Normal",
+        "familia": "Morto-Vivo",
+        "nivel": 6,
+        "descricao": "HP: 54; Unliving, Undying. The first time this dies, reset to 1 HP instead (excluding minions).\nSlam (2x). 1d4+8. On damage: Dazed."
     },
     {
         "nome": "Nalzar, Apex Predator",
         "tipo": "Lendario",
+        "familia": "Monstruosidade",
         "nivel": 6,
         "descricao": "HP: 180; Large; Tail Swipe. When dealt slashing or lightning damage: knock a hero within 3 spaces Prone.\nTorn Wings. Each slashing crit reduces the Wing Buffet DC by 1.\nACTIONS: After each hero's turn, choose one:\n• Devour. (Prone creatures only, Reach 2) 4d12+6.\n• Wing Buffet. Fly 8, then land. Cone 8: 1d12, then DC 14 STR save or also knocked Prone (advantage if behind cover or another hero).\nBLOODIED: At 90 HP, her Wing Buffet Range and DC increase by 2.\nLAST STAND: Nalzar is dying! 60 more damage and she dies. Until then, each turn, she moves 6, then uses Devour (ignoring the Prone requirement)."
     },
     {
+        "nome": "Nestweaver",
+        "tipo": "Normal",
+        "familia": "Aranha",
+        "nivel": 6,
+        "descricao": "HP: 54; Large; Summon 2 spider minions (d8). Then choose 1:\n• Shoot Web. (Range 6) 1d8+2 On hit: Restrained (escape DC 12, or any slashing/fire damage). OR:\n• Bite. (Hampered target) 3d8+6 and Poisoned (magical healing ends)."
+    },
+    {
+        "nome": "Orc Elite",
+        "tipo": "Normal",
+        "familia": "Orc",
+        "nivel": 6,
+        "descricao": "HP: 70; Battlelust. Heroes have disadvantage on Initiative against a band composed mostly of Orcs.\nTough as Nails. Medium armor, except against magic damage.\nEnrage. When crit: deal 5 damage to an adjacent enemy.\nCleave. 2d10+4, can target a 2nd enemy in Reach. OR: Heavy Javelin. 2d6+4 (Range 8)."
+    },
+    {
+        "nome": "Queen Aranya, Broodmother",
+        "tipo": "Lendario",
+        "familia": "Aranha",
+        "nivel": 6,
+        "descricao": "HP: 160; Large; Weave Web. Creatures she hits are entangled in a sticky web (Dazed).\nFlammable Webs. Fire critical hits suppress the Broodmother's Weave Web for 1 turn.\nACTIONS: After each hero's turn, choose one:\n• Impale. (Reach 2) 2d8+8 damage. Then skitter away up to 8 spaces.\n• Hatch Brood. Summon spiderling minions (1/hero, size:d8); they act only when commanded.\n• Dinner Time! Command all of your spiderling minions to move up to 6 spaces and attack once each.\nBLOODIED: \"Avenge Your Queen, My Brood!\" At 80 HP, summon 3 spiderling minions/hero anywhere within Reach 8.\nLAST STAND: Aranya is dying! 40 more damage and she dies. Until then, Hatch Brood after each of her turns."
+    },
+    {
+        "nome": "Basilisk",
+        "tipo": "Normal",
+        "familia": "Monstruosidade",
+        "nivel": 7,
+        "descricao": "HP: 48; Flesh to Stone. Creatures Dazed by the Basilisk remain so for 10 minutes. Dazed 3 times = Petrified.\n• Stone Gaze. Daze 1 creature within sight, then:\n• Envenom. 1d8+10, advantage vs Dazed targets."
+    },
+    {
+        "nome": "Drow Arachnomancer",
+        "tipo": "Normal",
+        "familia": "Elfo Negro",
+        "nivel": 7,
+        "descricao": "HP: 50; Ambush Combatants. Drow always go first in combat (unless surprised).\nCruel Poisoners. On Damage, Poisoned (healing ends). Roll d20s instead VS Hampered creatures.\nWeb Wall. (Single Use) Fill up to 8 empty spaces in a straight line with tangled webs. Enemies or objects who touch this area are Restrained (escape DC 13). Lasts until you die.\n• Fanglash. 2d8. On Damage: Poison 2 (rolls are made with disadvantage 2; healing ends). OR:\n• Pyrotoxin. (Range 8) 2d20 (to a Poisoned creature; ending the condition) this damage cannot be Interposed or Defended."
+    },
+    {
         "nome": "Florindris, Bane of the Forest",
         "tipo": "Lendario",
+        "familia": "Planta",
         "nivel": 7,
         "descricao": "HP: 200; Aura of Wind. Ranged attacks against you have disadvantage. End of turn: push adjacent creatures 2 spaces away.\nWither: Resistant to necrotic damage, but it suppresses Aura of Wind for 1 turn.\nACTIONS: After each hero's turn, choose one:\n• Petal Storm. (1 use) 3d10+10 damage to all enemies within Reach 8, half on a DC 13 DEX save.\n• Rend. Fly 10 before or after attacking. (Reach 2) 1d10+10 damage to up to 2 targets within reach. On hit: Gain Thornblight. (Thornblight: Suffer 5 damage for each space you are forcibly moved. Magical healing ends this effect).\n• Gust. (Reach 8) Move a target 1d10 spaces.\nBLOODIED: At 100 HP, enemies within Reach 12 gain Thornblight, and Petal Storm recharges.\nLAST STAND: Florindris is dying! 70 more damage and she dies. Until then, Aura of Wind and Gust move creatures twice as far."
     },
     {
+        "nome": "Razzle, Gremlin Iconoclast",
+        "tipo": "Lendario",
+        "familia": "Fada",
+        "nivel": 7,
+        "descricao": "HP: 200; Small; \"The Boys.\" When combat begins, 2 Gremlin minions/hero arrive as well.\nEndless Stream of Vile Insults. All heroes are permanently Taunted by Razzle.\nACTIONS: After each hero's turn choose 1:\n• Poke Eyes, Pull Hair. (If a minion died last turn) Teleport to an enemy, gain Riding and attack for 1d6+6. On hit: Blinded 1 round. Then (if the heroes outnumber the gremlins) summon 1 minion/hero.\n• Get 'em Boys! (If no minions died last turn) All minions move then attack (1d6 each, 1d8 instead VS a Blinded or Ridden hero).\nBLOODIED: \"Razzle Dazzle!\" At 100 HP A flash of glitter Blinds all heroes for 1 round. Razzle may teleport 8 and summon 1 minion/hero.\nLAST STAND: Razzle is losing his cool! 70 more damage and he's banished to the Wildscapes. 3 Gremlin Minions/hero arrive to protect him. Razzle turns invisible until the end of the next Hero's turn."
+    },
+    {
+        "nome": "Black Pudding",
+        "tipo": "Normal",
+        "familia": "Limo",
+        "nivel": 8,
+        "descricao": "HP: 90; Large; Digestive Touch. Contact with an ooze inflicts the Digested condition.\nAcidic Touch (2x). (Reach 2) 1d6+5."
+    },
+    {
+        "nome": "Blood Thrall",
+        "tipo": "Normal",
+        "familia": "Morto-Vivo",
+        "nivel": 8,
+        "descricao": "HP: 75; Nothing Without Master! Unarmored and attack with disadvantage when beyond Reach 6 of a Vampire.\nBlood Spatter: Melee attackers and creatures you hit become Bloodsoaked: considered Bloodied until washed.\nCursed Dagger. 1d4. On hit: +25 damage."
+    },
+    {
+        "nome": "Breaker Hulk",
+        "tipo": "Normal",
+        "familia": "Constructo",
+        "nivel": 8,
+        "descricao": "HP: 60; Large; Mana Charged. After mana is spent, the closest mana construct MUST attack a target within Range/Reach.\nCrush. Moving through a Prone creature deals 20 damage.\nArmor Breaker. 1d4+20. On Crit: Prone. Advantage 2 vs Tanky targets (STR>DEX).\nOn Death. An enemy gains 15 temp HP."
+    },
+    {
+        "nome": "Druid",
+        "tipo": "Normal",
+        "familia": "Humanoide",
+        "nivel": 8,
+        "descricao": "HP: 90; • Beastshift. +4 speed, gain Medium armor this round. 4d4+10. OR:\n• Hurricane. (Reach 3) 4d4+10 to all enemies within reach. On damage: move targets anywhere else in Reach."
+    },
+    {
         "nome": "General Flameheart",
         "tipo": "Lendario",
+        "familia": "Gigante",
         "nivel": 8,
         "descricao": "HP: 175; Huge; Cinder Armor. Immune to fire. When damaged, deal 5 fire damage to all adjacent creatures.\nExtinguish Flame. Cold or radiant crits extinguish all areas ignited by Molten Fury and suppress Cinder Armor for 1 turn.\nACTIONS: After each hero's turn, choose one:\n• Inferno Cleave. Move 8 then strike a 2x2 square area for 2d10+10 fire damage.\n• Molten Fury. Lob a molten fireball at the furthest hero not already in the flames, igniting a 2x2 square area. Creatures there take 2d10+10 damage; and another 10 damage at the end of each of their turns if they remain in the area.\nBLOODIED: At 87 HP, on his next turn, he uses Molten Fury a number of times equal to half the number of heroes (rounded up).\nLAST STAND: Flameheart is dying! 80 more damage and he dies. Until then, the area of his attacks increase to a 3x3 square."
     },
     {
+        "nome": "Giant Cobra",
+        "tipo": "Normal",
+        "familia": "Fera",
+        "nivel": 8,
+        "descricao": "HP: 80; Large; Coiling Strike. On melee crit: Grapple (escape DC 10).\nCrush. 2d6+20. Advantage vs. smaller creatures."
+    },
+    {
+        "nome": "Hollow Knight",
+        "tipo": "Normal",
+        "familia": "Morto-Vivo",
+        "nivel": 8,
+        "descricao": "HP: 40; Hatred of light. Vulnerable to Radiant. Immediately strikes back for half as much damage.\nHollow One. Cannot crit or be crit (ignore any additional dice/effects that happen when crit).\n• Doomblade. 1d10+10 (Req: DC 12 WIL save to Interpose)."
+    },
+    {
+        "nome": "Incubus/Succubus",
+        "tipo": "Normal",
+        "familia": "Infernal",
+        "nivel": 8,
+        "descricao": "HP: 90; • Infernal Allure. At the beginning of each round, Allure 1 hero on a failed DC 15 WIL save (you spend one of their actions this round).\n• Brimstone Whip. (Reach 3) 2d6+6 damage."
+    },
+    {
+        "nome": "Lizardfolk Shaman",
+        "tipo": "Normal",
+        "familia": "Homem-Lagarto",
+        "nivel": 8,
+        "descricao": "HP: 60; Muck Walkers. Double movement while in Muck. Cold-Blooded. Hit by Ice-based attack = Poisoned 1 round.\nBroodward. When damaged, choose 1 other Lizardfolk to immediately move and attack.\nSwampsong. Lizardfolk attack with d10s this round.\nMother to us all: Upon Death, Lizardfolk roll d20s for the rest of the encounter."
+    },
+    {
+        "nome": "Orc Warchief",
+        "tipo": "Normal",
+        "familia": "Orc",
+        "nivel": 8,
+        "descricao": "HP: 90; Battlelust. Heroes have disadvantage on Initiative against a band composed mostly of Orcs.\nTough as Nails. Medium armor, except against magic damage.\nEnrage. When crit: deal 5 damage to an adjacent enemy.\nWarchief's Axe. 2d10+4, then: Call the Horde. Summon 1 Orc to the battlefield."
+    },
+    {
+        "nome": "Scourge Hulk",
+        "tipo": "Normal",
+        "familia": "Constructo",
+        "nivel": 8,
+        "descricao": "HP: 75; Large; Mana Charged. After mana is spent, the closest mana construct MUST attack a target within Range/Reach.\nPunish. (Reach 2) 3d6, the highest die is the primary die. On crit: +20 damage & Prone.\nOn Death. An enemy gains 1 action."
+    },
+    {
+        "nome": "Spire Hulk",
+        "tipo": "Normal",
+        "familia": "Constructo",
+        "nivel": 8,
+        "descricao": "HP: 70; Large; Mana Charged. After mana is spent, the closest mana construct MUST attack a target within Range/Reach.\nAegis. Ignore damage from 1st attack each round.\nSwift Strike. (Reach 2) 1d6+20. 1d20+20 instead vs. Evasive targets (DEX>STR).\nOn Death. An enemy can move for free."
+    },
+    {
+        "nome": "Death Knight",
+        "tipo": "Normal",
+        "familia": "Morto-Vivo",
+        "nivel": 9,
+        "descricao": "HP: 50; Merciless Aura. Enemies within Reach 1 cannot regain HP, when healed they instead suffer 1d10 damage.\n• Doomblade. 1d10+20 (Req: DC 14 WIL save to Interpose). Then (optional): • Call Servant. (Single use) Summon 2 Grave Crows or 1 Grave Squire within Reach 6.\nREACTION (single use) Gravewalk. Instantly descend into the earth and errupt from the ground up to 6 spaces away. Creatures within Reach 2 are knocked Prone on a failed DC 14 DEX save."
+    },
+    {
+        "nome": "Drow Elite Warrior",
+        "tipo": "Normal",
+        "familia": "Elfo Negro",
+        "nivel": 9,
+        "descricao": "HP: 70; Ambush Combatants. Drow always go first in combat (unless surprised).\nCruel Poisoners. On Damage, Poisoned (healing ends). Roll d20s instead VS Hampered creatures.\nDeft Parry. The first attack against you each round misses.\nBlade Flurry. (2x) 2d8."
+    },
+    {
         "nome": "Vael, Undying Necromancer",
         "tipo": "Lendario",
+        "familia": "Humanoide",
         "nivel": 9,
         "descricao": "HP: 250; Protect Master! Whenever Vael would fail a save or take 20 or more damage, he may sacrifice his Lifebinding Spirit, Bane, instead. He spends his next turn moving up to 6 spaces and summoning Bane.\nACTIONS: After each hero's turn, Bane attacks for 1d12+6 then Vael chooses one:\n• DOOM. (Range 12, undamaged target) DC 14 WIL save or 5d12 damage. Half on save.\n• Veilwalker's Rebuke. (Range 8) 2d12+6. Double damage against those behind cover. 1/round you may swap places with them.\n• Cruelty's Edge. 1d4+2. On hit: DC 14 WIL save or Dazed and Frightened. Then move 6.\nBLOODIED: At 125 HP, Vael gains the reaction Shield of Cruelty. (1 time use) If Vael would be damaged, instead he may reflect that much radiant damage back at the attacker.\nLAST STAND: DEATH, AN OLD FRIEND. Vael is dying! 90 more damage and he dies. Until then, he gains Heavy Armor, the hero that most recently damaged him is reduced to 0 HP, and Bane is sacrificed into a Vengeful Spirit. It deals 1d12+6 necrotic damage to creatures within reach 3 at the end of each of his turns."
     },
     {
+        "nome": "Bloodstain",
+        "tipo": "Normal",
+        "familia": "Morto-Vivo",
+        "nivel": 10,
+        "descricao": "HP: 75; Blood Spatter: Melee attackers and creatures you hit become Bloodsoaked: considered Bloodied until washed.\nCrimson Lash: 1d4+10 (Reach 2), up to 3 targets."
+    },
+    {
+        "nome": "Bogey",
+        "tipo": "Normal",
+        "familia": "Fada",
+        "nivel": 10,
+        "descricao": "HP: 120; Large; Taste for Violence. If a Bogey has 2 or more adjacent heroes, it uses a d20 for its attacks.\nChoose Twice:\n• Smash and Grab. 1d10+5. On Hit: Grappled (escape DC 14).\n• Headbutt. If Grappling target, 1d10+10 damage and Dazed."
+    },
+    {
+        "nome": "Bulette",
+        "tipo": "Normal",
+        "familia": "Monstruosidade",
+        "nivel": 10,
+        "descricao": "HP: 74; Large; Burst Forth! Combat with a Bulette starts with the heaviest character making a DC 14 DEX save or they are Grappled (escape DC 14) and take 1d12+20 damage (half on save).\n• Drag Below. (A Grappled creature) 2d12 then drag below and burrow away. OR:\n• Leap & Bite. (If not grappling) leap 6, and attack for 1d12+20. On hit: Grappled."
+    },
+    {
+        "nome": "Caelias, Baron of Ash",
+        "tipo": "Lendario",
+        "familia": "Morto-Vivo",
+        "nivel": 10,
+        "descricao": "HP: 200; Mounted Combatant. Heroes have disadvantage on Initiative. While mounted, Caelias does not trigger Opportunity Attacks and can move through smaller creatures as if they were not there.\nACTIONS: After each hero's turn, Move 6 then choose one:\n• Doom Charge. Charge forward up to 10 spaces in a straight line. Each creature you pass through takes 20 damage - DEX save. They are knocked Prone if they take 10 or more damage this way.\n• Doomblade. 1d10+20, on crit: 1 Wound (Req: DC 16 WIL save to Interpose).\nBLOODIED: When Caelias is reduced to 100 HP, he dismounts and summons his Doomsteed (100 HP Large, unarmored creature, it can Interpose 1/round from up to 10 spaces away). He uses Doomblade AND the Doomsteed can Doom Charge each turn.\nLAST STAND: Caelias is dying! 100 more damage and he dies. Summon 2 Gravecrows within Reach 10 at the end of each of your turns (they act at the end of each round). Gain advantage on Doomblade attacks."
+    },
+    {
+        "nome": "High Orc Flamecaller",
+        "tipo": "Normal",
+        "familia": "Orc",
+        "nivel": 10,
+        "descricao": "HP: 70; Battlelust. Heroes have disadvantage on Initiative against a band composed mostly of Orcs.\nTough as Nails. Medium armor, except against magic damage.\nEnrage. When crit: deal 5 damage to an adjacent enemy.\nTouch Not The Flamecaller! When damaged, choose 1 Orc to move and trigger their Enrage ability.\nPillar of Flame. (AoE, Reach 8) 1d10+10 to ALL creatures in a 2x2 area. Orcs there trigger their Enrage ability."
+    },
+    {
+        "nome": "Hill Giant (Lvl 10)",
+        "tipo": "Normal",
+        "familia": "Gigante",
+        "nivel": 10,
+        "descricao": "HP: 120; Huge; Clumsy. Always attacks with disadvantage.\n• Clobber (2x). 1d6+15. On hit: Prone. OR:\n• Stomp. (Prone Creature) 1d6+40. OR:\n• Punt. 1d12+10 On hit: Knockback Primary Die spaces, landing Prone."
+    },
+    {
+        "nome": "Hordecaller Kerem",
+        "tipo": "Lendario",
+        "familia": "Orc",
+        "nivel": 10,
+        "descricao": "HP: 250; Hordecaller. When initiative is rolled and when crit, summon 1 Flamebound Ancestor per hero (place them within Reach 6). (Flamebound Ancestor: d10 minion. On death: 5 damage to 1 adjacent enemy).\nACTIONS: After each hero's turn, Move 6 then choose one:\n• Ancestors of Flame. If there are more heroes than Orcs: Use your Hordecaller ability.\n• Command the Horde: (1/round) Command your horde to move then attack.\n• Flameslash. (Reach 6) 2d10+4 damage.\nBLOODIED: \"Ancestors, I call upon thee!\" Trigger your Hordecaller ability.\nLAST STAND: Kerem is dying! 100 more damage and he dies. Hordecall at the end of each turn."
+    },
+    {
+        "nome": "Lashfiend",
+        "tipo": "Normal",
+        "familia": "Infernal",
+        "nivel": 10,
+        "descricao": "HP: 130; Large; I Offer You REVENGE! When attacked by an Lashfiend, the target may choose to make a DC 15 STR save. On save, the hero chooses one of the dice rolled for the Lashfiend to suffer, the hero takes the remaining damage.\nPunish. (Reach 8) 2d20+10 damage. If the Offer was accepted, roll 1 additional d20."
+    },
+    {
+        "nome": "Lizardfolk Greatscale",
+        "tipo": "Normal",
+        "familia": "Homem-Lagarto",
+        "nivel": 10,
+        "descricao": "HP: 100; Muck Walkers. Double movement while in Muck. Cold-Blooded. Hit by Ice-based attack = Poisoned 1 round.\nMighty Scales. Attacks miss them on 1 and 2.\nTail Swipe. 2d8 to all enemies within Reach 2. On damage, Prone. Then:\nCrush. 2d8+10 On crit: Dazed."
+    },
+    {
+        "nome": "Mav, The Winter Queen",
+        "tipo": "Lendario",
+        "familia": "Fada",
+        "nivel": 10,
+        "descricao": "HP: 280; Wind Ward. Attacks from Range 6 or beyond have disadvantage against Mav.\nIce Avatar. Resistant to Ice, vulnerable to Fire: when dealt Fire damage, her next attack is made with advantage.\nACTIONS: After each hero's turn choose 1:\n• Winter's Wrath. (1 use, Reach 8) Create a 6x6 area of wintry storm. Enemies in the area take 10 damage, they take 10 more whenever they enter the area or if there at the end of each of their turns.\n• Wolf-Spirit's Bite. Move 10. 1d10+8. On hit: drag the target 2 spaces in any direction.\n• Stormlord's Gust. (Reach 8) All heroes make a DC 15 STR Save. Move all heroes that fail up to 4 spaces in the same direction; on success, half as far.\nBLOODIED: At 140 HP, Mav's Wintry Storm increases to 8x8. Mav is no longer vulnerable to Fire damage. Your forced movement moves twice as far.\nLAST STAND: Mav is thawing out! 100 more damage and she's banished to the Wildscapes. Her Wintry Storm is ended, Mav summons icy shards that cover the ground within Reach 12. Enemies suffer 3 damage for each space they move in the area."
+    },
+    {
         "nome": "Titan of the Deep Woods",
         "tipo": "Lendario",
+        "familia": "Morto-Vivo",
         "nivel": 10,
         "descricao": "HP: 240; Huge; Splintering Legions. Bludgeoning damage or any crit cause bones to splinter off and animate, forming a d10 minion.\nBrittle Bones. Resistant to piercing, vulnerable to bludgeoning.\nACTIONS: After each hero's turn, choose 1:\n• Devastating Strike. (Reach 4) 1d4+30 damage. On hit: Knockback 6.\n• Crushing Stomp. Move up to 10 spaces. Deal 1d4+20 damage to up to 2 targets along the path. On hit: Prone.\n• Beckoning Doom. The 2 furthest heroes make a DC 16 STR save or are moved adjacent to Titan.\nLAST STAND: Shattered Legion. At 0 HP Titan collapses into 4 skeleton minions/hero (d10 sized). If any remain, they reassemble into the Titan the next evening."
     },
     {
+        "nome": "Troll",
+        "tipo": "Normal",
+        "familia": "Gigante",
+        "nivel": 10,
+        "descricao": "HP: 100; Large; Regenerate. Does not die at 0 HP. Only fire, radiant, or a crit while at 0 HP can kill it.\nChoose twice:\n• Claws. (Reach 2) 1d4+10. On crit: Prone.\n• Bite. (A Prone creature) 1d4+20."
+    },
+    {
+        "nome": "Umber Hulk",
+        "tipo": "Normal",
+        "familia": "Monstruosidade",
+        "nivel": 10,
+        "descricao": "HP: 70; Large; Confounding Pheromones. Enemies make a DC 15 WIL save at the start of their turns or Confused this turn.\nMandible & Claws (2x). 1d10+10 damage."
+    },
+    {
+        "nome": "Vampire Spawn",
+        "tipo": "Normal",
+        "familia": "Morto-Vivo",
+        "nivel": 10,
+        "descricao": "HP: 118; Sunscorn. Radiant deals + 10 damage to you. When damaged this way, gain advantage on your next attack.\nPredation: Advantage VS Bloodied creatures.\n• Rend. 1d10+20. OR: • Feed. (If you have advantage) 1d20+20 damage."
+    },
+    {
+        "nome": "Wraith",
+        "tipo": "Normal",
+        "familia": "Morto-Vivo",
+        "nivel": 10,
+        "descricao": "HP: 94; Unliving, Undying. The first time this dies, reset to 1 HP instead (excluding minions).\nSoul Rend (2x). (Range 8) 1d4+10. On damage: deal 1 Wound."
+    },
+    {
+        "nome": "Drider",
+        "tipo": "Normal",
+        "familia": "Elfo Negro",
+        "nivel": 11,
+        "descricao": "HP: 90; Large; Horrible Sight. Upon first sight of this creature, enemies become Frightened on a failed DC 15 WIL save.\nCharge. 3d20. On hit: Prone."
+    },
+    {
         "nome": "Ul'vek, Psionic Despot",
         "tipo": "Lendario",
+        "familia": "Aberração",
         "nivel": 11,
         "descricao": "HP: 300; Mind Shield. Whenever Ul' would fail a save or take more than 30 damage while he has a creature Dominated, he may avoid the attack instead, but all Dominated creatures come to their senses.\nACTIONS: After each hero's turn, choose one:\n• Dominate. (If no creatures are Dominated) Choose half of the heroes to suffer 2d12 psychic damage (ignoring armor). DC 15 WIL save or Dominated as well. (Dominated: Rolls are made with disadvantage. Ul' spend your first action on each of your turns, moving, making a weapon attack, or casting a cantrip. Damage ends).\n• Consume. (Dominated creature) Contested DEX or STR check, on success: Grappled and 6d12. Cannot be Defended or Interposed against.\n• Control. Teleport 8. (Range 8) DC 15 WIL save, force an enemy to spend one Action to make a weapon attack or cast a cantrip. On save, they attack with disadvantage.\nBLOODIED: At 150 HP gain Illusory Shift. Reaction, when attacked (1 use): Swap places with a Dominated creature, making them the new target of the attack.\nLAST STAND: Ul' is dying! 110 more damage and he dies. Until then, Dominated no longer ends on taking damage. Every hero makes a WIL save or become Dominated."
     },
     {
+        "nome": "Vrock",
+        "tipo": "Normal",
+        "familia": "Infernal",
+        "nivel": 11,
+        "descricao": "HP: ??; Large; Infernal Allure. At the beginning of each round, Allure 1 hero on a failed DC 15 WIL save (you spend one of their actions this round). They gain advantage on the save for each time they fail this encounter.\nBrimstone Whip. (Reach 3) 2d6+6 damage."
+    },
+    {
+        "nome": "Death Knight Marshal",
+        "tipo": "Normal",
+        "familia": "Morto-Vivo",
+        "nivel": 12,
+        "descricao": "HP: 80; Merciless Aura. Enemies within Reach 2 cannot regain HP, when healed they instead suffer 2d10 damage.\n• Doomblade. 1d10+25 (Req: DC 16 WIL save to Interpose). Then: • Call Servant. Summon 2 Grave Crows or 1 Grave Squire within Reach 8.\nREACTION (single use) Gravewalk. Instantly descend into the earth and errupt from the ground up to 8 spaces away. Creatures within Reach 2 are knocked Prone on a failed DC 16 DEX save."
+    },
+    {
         "nome": "Dravok, All-Seeing Tyrant",
         "tipo": "Lendario",
+        "familia": "Aberração",
         "nivel": 12,
         "descricao": "HP: 325; Large; My plans, flawless! Dravok makes all saves with + 1 Advantage, attacks against him have Disadvantage.\nWeakness: Taking more than 12 piercing or slashing damage: Dravok's plans are FLAWED! (until the end of the next hero's turn).\nACTIONS: After each hero's turn, Move 6 and then either use Eye Ray (Range 10, randomly chosen ray then choose target) OR Terrible Maw. (Melee attack. 4d4, EVERY die can crit and is Vicious).\n1. Warping Ray. 3d6. On hit: Dazed, exchange places with target.\n2. Petrification Ray. Permanently Dazed. Healing ends. (3 stacks, Petrified).\n3. Terror Ray. 5d10 psychic damage & Terrified: You are Frightened, and your screams give allies within 6 disadvantage on rolls. Ends when Dravok's plans are FLAWED.\n4. Gravitation Ray. 2d6 damage. Push that many spaces. Knocked Prone on 7+.\n5. Charm Ray. DC 16 WIL save or you spend 3 Actions attacking with or moving them, 2 actions on save.\n6. Death Ray. DC 16 STR save or drop to 0 HP. On save, gain 1 Wound. If a Dying creature fails this, they die.\nBLOODIED: To Dust! At 110 HP, use Petrification Ray against every enemy. His save DC increases to 18.\nLAST STAND: Dravok is dying! 70 more damage and he dies. Until then, each turn he will move or use Warping Ray and then Devastation Beam. 2d12+20 in a 10 space long, 2 space wide line."
     },
     {
+        "nome": "Elder Ooze",
+        "tipo": "Normal",
+        "familia": "Limo",
+        "nivel": 12,
+        "descricao": "HP: 150; Huge; Digestive Touch. Contact with an ooze inflicts the Digested condition.\nGoopy. When crit or dealt any slashing damage: summon X ooze minions (size: d6); their attacks inflict Digested.\nAcidic Touch (3x) (Reach 3) 1d6+6."
+    },
+    {
+        "nome": "Hill Giant",
+        "tipo": "Normal",
+        "familia": "Gigante",
+        "nivel": 12,
+        "descricao": "HP: 140; Huge; Brute. On hit: Knockback Primary Die spaces.\n• Smash (2x). (Reach 2) 1d6+15. OR:\n• Boulder! (Range 12) 1d6+20."
+    },
+    {
+        "nome": "Cloaker",
+        "tipo": "Normal",
+        "familia": "Aberração",
+        "nivel": 13,
+        "descricao": "HP: 110; Large; Ambusher. Cloakers always start first and heroes roll Initiative with disadvantage.\nMutual Harm. You take half damage from attacks while grappling a creature (they take the other half).\n• Wrap. 2d10+20. On Hit: Grappled (escape DC 16). OR:\n• Horrifying Wail. DC 16 WIL save, or creatures within 6 spaces are Frightened and must spend 1 Action moving as far away as possible."
+    },
+    {
+        "nome": "Hezrou",
+        "tipo": "Normal",
+        "familia": "Infernal",
+        "nivel": 13,
+        "descricao": "HP: 150; Large; Bite (2x). 2d6+6. Highest die is Primary. On Crit: Consumed.\nConsumed. At the end of each of your turns suffer 2d6+6 damage (ignoring armor) and 1 Wound. Your attacks have advantage and ignore armor (teleport or escape DC 15)."
+    },
+    {
+        "nome": "Hierarch",
+        "tipo": "Normal",
+        "familia": "Infernal",
+        "nivel": 13,
+        "descricao": "HP: 170; Large; Tip the Scales. Enemies roll Disadvantage, with +1 Disadvantage. Allies roll Advantage with +1 Advantage.\nI Offer You ABSOLUTION! (Reach 8) Permit 1 hero to kneel (considered Prone). Otherwise punish them for 2d20+10 damage."
+    },
+    {
+        "nome": "Hydra",
+        "tipo": "Normal",
+        "familia": "Monstruosidade",
+        "nivel": 13,
+        "descricao": "HP: 160; Uh, guys... Starts with 2 heads. Gain 1 additional head at 120hp, 90hp, 60hp, and 30hp.\nBite. (Reach 3) 1d20 per head, you may split the damage dice among any creature in Reach. On damage, poisoned (healing ends)."
+    },
+    {
         "nome": "Azriel, Lord of Pain & Flame",
         "tipo": "Lendario",
+        "familia": "Infernal",
         "nivel": 14,
         "descricao": "HP: 320; Huge; PAIN! Crits against Azriel are Vicious, he deals damage equal to the crit dice back to the attacker.\nACTIONS: After each hero's turn, choose 1:\n• Crackling Whip. Move 6. (Reach 6) 3d12 damage. On hit: Grappled and pulled adjacent to Azriel (escape DC 17 STR, DEX, or until he uses the whip again).\n• Doom Sword. 3d12+10 fire damage to all creatures within Reach 2.\nBLOODIED: At 160 HP, Azriel can use Crackling Whip twice each turn.\nLAST STAND: YES, MORE PAIN! Azriel is dying! 180 more damage and he dies. Until then, EVERY hit against him is a crit."
     },
     {
+        "nome": "Breaker Titan",
+        "tipo": "Normal",
+        "familia": "Constructo",
+        "nivel": 14,
+        "descricao": "HP: 125; Huge; Mana Charged. After mana is spent, the closest mana construct MUST attack a target within Range/Reach.\nCrush. Moving through a Prone creature deals 30 damage.\nArmor Breaker. (Reach 2) 1d4+30. On Crit: Prone. Advantage 3 vs Tanky targets (STR>DEX).\nOn Death. An enemy gains 30 temp HP."
+    },
+    {
+        "nome": "Cloud Giant",
+        "tipo": "Normal",
+        "familia": "Gigante",
+        "nivel": 14,
+        "descricao": "HP: 190; Huge; Mystical Aura. (1/round. Reaction: when a creature is targeted) Choose another one to be likewise affected.\nPawn in My Domain. Move another creature 6; their next attack damage is either doubled or halved (your choice). Then choose 1:\n• Windshear. (Range 8) 1d12+20 and summon a cyclone minion: (1d12) on hit: move 1 space.\n• Rupture Lungs. (AoE, Reach 1) 1d12+20 (ignores armor).\nBloodied: Cloudform. At 95 HP, turn into a misty cloud and reform up to 8 spaces away. Steal the breath of all you pass through, Dazing them."
+    },
+    {
+        "nome": "Glabrezu",
+        "tipo": "Normal",
+        "familia": "Infernal",
+        "nivel": 14,
+        "descricao": "HP: 110; Large; • Doomclaw (2x). (Reach 2) 3d6+10. On damage: Grappled (escape DC 17). If the same creature is Grappled by both of the glabrezu's claws, it must escape from each of them separately. OR:\n• Tear Asunder. (A creature Grappled by both of the glabrezu's claws) 50 unpreventable damage. If the target is at 0 HP: DC 17 STR save or be torn in two, dying instantly."
+    },
+    {
+        "nome": "Scourge Titan",
+        "tipo": "Normal",
+        "familia": "Constructo",
+        "nivel": 14,
+        "descricao": "HP: 150; Huge; Mana Charged. After mana is spent, the closest mana construct MUST attack a target within Range/Reach.\nPunish. (Reach 3) 4d6, the highest die is the primary die. On crit: +30 damage & Prone.\nOn Death. 2 enemies gain 1 action."
+    },
+    {
+        "nome": "Spire Titan",
+        "tipo": "Normal",
+        "familia": "Constructo",
+        "nivel": 14,
+        "descricao": "HP: 150; Huge; Mana Charged. After mana is spent, the closest mana construct MUST attack a target within Range/Reach.\nAegis. (1/round) Ignore ALL effects of 1 attack.\nSwift Strike. (Reach 3) 1d6+30. 1d20+30 instead vs. Evasive targets (DEX>STR).\nOn Death. 2 enemies can move for free."
+    },
+    {
+        "nome": "Treant",
+        "tipo": "Normal",
+        "familia": "Planta",
+        "nivel": 14,
+        "descricao": "HP: 170; Huge; Enrage. Attack with advantage when unarmored.\nChoose twice: • Slam. (Reach 3) 2d6+10. On damage: Prone.\n• Stomp. (Hampered target) 2d6+20."
+    },
+    {
+        "nome": "Tyr, Lord of Legions",
+        "tipo": "Lendario",
+        "familia": "Morto-Vivo",
+        "nivel": 14,
+        "descricao": "HP: 360; Commander of Dark Devotion. Tyr's Squires can attack for 1d10 damage.\nACTIONS: After each hero's turn choose one:\n• Squires, Attend Me. Summon 1 Grave Squire adjacent to you and each hero.\n• Strike! Each Grave Squire can move 6 and attack (Req: DC 16 WIL save to Interpose).\nBLOODIED: \"Squires, hold fast!\" When Tyr is reduced to 180 HP, he summons 1 Grave Squire per hero. Grave Squires now die only when they suffer 10 or more damage at a time.\nLAST STAND: Tyr is dying! 140 more damage and he dies. He summons 2 Grave Squires adjacent to himself and each hero, they act immediately."
+    },
+    {
+        "nome": "Vampire Thinblood",
+        "tipo": "Normal",
+        "familia": "Morto-Vivo",
+        "nivel": 14,
+        "descricao": "HP: 170; Sunscorn. Radiant deals + 10 damage to you.\nPredation: Advantage VS Bloodied creatures.\nMesmerize. DC 16 WIL Save or spend 1 action moving where the vampire wishes. Then:\n• Rapier (x2). 1d10+10 OR • Feed. (If you have advantage) 1d20+30 damage and 1 Wound."
+    },
+    {
+        "nome": "Vorgrath, the Insatiable",
+        "tipo": "Lendario",
+        "familia": "Infernal",
+        "nivel": 14,
+        "descricao": "HP: 375; Actions: After each hero's turn perform 1 action (recommended: in order).\n• Bow Before Me! Each hero rolls 3d20. Allow each to bow (become Prone) or take that much damage.\n• Serve Me! (Prone target) Spend 3 actions for them (they regain any spent actions).\n• Suffer! Fly 8 then Ichorbolt. (Range 8) d66 damage to creatures in a 3x3 area.\nBLOODIED: BLEED WITH ME! At 187 HP, Vorgrath inflicts Lacerated on all heroes. (Lacerated: Suffer 1 damage for each space you move (or are moved). Healing or a DC 15 Examination check ends).\nLAST STAND: Your Pain Will Be Unending! Vorgrath is dying! 140 more damage and he dies! Until then he can force a hero within Reach 8 to Interpose for him (1 time use)."
+    },
+    {
+        "nome": "Fire Giant",
+        "tipo": "Normal",
+        "familia": "Gigante",
+        "nivel": 15,
+        "descricao": "HP: 120; Huge; Cinder Armor. Vulnerable to Ice. When crit or dealt Ice damage: (AoE, Reach 2) 1d20 fire damage & Blind 1 round.\nDeep Burn. Roll with advantage against targets that have taken fire damage this round.\n• Flamestrike. (Reach 16) 1d20+10 damage. +1d20 if beyond Reach 8.\n• Molten Hammer. (Cone 3) 1d20+10.\nBloodied: Meltdown. (Reaction: at 60 HP, Reach 8) 1d20 fire damage to all enemies."
+    },
+    {
         "nome": "Gloomwing the Cruel",
         "tipo": "Lendario",
+        "familia": "Dragão",
         "nivel": 15,
         "descricao": "HP: 320; Huge; Aura of Rot. Creatures within 6 spaces take 5 necrotic damage at the end of their turns.\nLight Sensitivity: Radiant damage suppresses Aura of Rot until the end of the next hero's turn.\nACTIONS: After each hero's turn, choose one:\n• Rot Breath. (1 use) Fly 10, then (Cone 8) DC 17 DEX save or 8d10 necrotic, half on save.\n• Bite. (Reach 2) Move 6, then 3d10. On damage: Cruelty's Gift. (Cruelty's Gift: Healing is halved and Vulnerable to necrotic damage. Healing ends).\n• Claws. (Reach 2) then 3d10 slashing +10 necrotic.\n• Tail. (Reach 4) 1d10, and knocked back that many spaces.\nBLOODIED: At 160 HP Gloomwing's Rot Breath recharges.\nLAST STAND: Gloomwing is dying! 150 more damage and he dies. Until then, the damage and range of His Aura of Rot is doubled."
     },
     {
+        "nome": "Overlord",
+        "tipo": "Normal",
+        "familia": "Infernal",
+        "nivel": 15,
+        "descricao": "HP: 200; Large; Cruel Dealer. Whenever an enemy rejects an Offering, they take 10 psychic damage.\n• Rise, My Minions! (Reach 8) Summon 3 fiendish minions (size:d8). Then: We Offer You Clarity! Each fiendish minion Offers to Taunt an enemy."
+    },
+    {
+        "nome": "Vampire Gorger",
+        "tipo": "Normal",
+        "familia": "Morto-Vivo",
+        "nivel": 15,
+        "descricao": "HP: 230; Large; Sunscorn. Radiant deals + 10 damage to you.\nPredation: Advantage VS Bloodied creatures.\nBloodgorged: Vulnerable to Piercing and Slashing damage, when damaged this way adjacent targets become Bloodsoaked: considered Bloodied until they wash.\n• Thrash. 2d10+10 to all adjacent targets OR: • Devour. (If you have advantage) 1d20+30 damage and 1 Wound."
+    },
+    {
         "nome": "Alaric Draegoth, the Crimson Count",
         "tipo": "Lendario",
+        "familia": "Morto-Vivo",
         "nivel": 16,
         "descricao": "HP: 320; Sanguine Cloak. (1/turn) Deal 1d10 necrotic damage whenever you are hit, the attack is reduced by this amount.\nSunscorn: Vulnerable to radiant. After taking radiant damage, use Beguile as a Reaction, they roll with disadvantage.\nACTIONS: After each hero's turn, summon 1 blood bat minion (d10) within 8 spaces, then choose 1:\n• Ebonfang. Deal 1d10+15 damage, your target is considered Bloodied for 1 round. Fly 8 before or after attacking.\n• Beguile. If no creature is Beguiled, Beguile a target on a failed DC 18 WIL save (w/ disadvantage if Bloodied). (Beguiled: Dazed. Cannot Defend or allow anyone to Interpose for you. Damage ends).\n• Beckon & Bite. Move a Beguiled creature adjacent to you and bite them: 2d10+30 damage and 1 Wound.\nBLOODIED: At 160 HP, gain Mistform. Not vulnerable to radiant. Bat Decoy. Whenever Alaric would take damage, instead first swap places with a bat minion, 1/round.\nLAST STAND: Alaric is dying! 160 more damage and he dies. Until then, his Sanguine Cloak, attacks, and bats roll d20s instead of d10s."
     },
     {
+        "nome": "Death Knight Baron",
+        "tipo": "Normal",
+        "familia": "Morto-Vivo",
+        "nivel": 16,
+        "descricao": "HP: 120; Large; Merciless Aura. Enemies within Reach 3 cannot regain HP, when healed they instead suffer 3d10 damage.\n• Doomblade. 1d10+30 (Req: DC 18 WIL save to Interpose). Then: • Call Servant. Summon 2 Grave Crows and 1 Grave Squire within Reach 10.\nREACTION (2 uses) Gravewalk. Instantly descend into the earth and errupt from the ground up to 10 spaces away. Creatures within Reach 3 are knocked Prone on a failed DC 18 DEX save."
+    },
+    {
+        "nome": "Drow Priestess",
+        "tipo": "Normal",
+        "familia": "Elfo Negro",
+        "nivel": 16,
+        "descricao": "HP: 90; Large; Ambush Combatants. Drow always go first in combat (unless surprised).\nBroodmother. Summon 5 Spiderling minions within Reach 8 (size: d8).\nDeathcry: Horrible Emergence. Transform into a Drider."
+    },
+    {
+        "nome": "Great Worm",
+        "tipo": "Normal",
+        "familia": "Monstruosidade",
+        "nivel": 16,
+        "descricao": "HP: 140; Huge; Tremor Sight. Advantage against creatures that moved since the worm's last turn.\n• Crush. Creatures in a 2x6 area take 50 damage on a failed DC 18 DEX save. OR:\n• Bite/Swallow. 1d4+40. On crit: Swallowed. (Swallowed: You take 20 damage at the start of your turn)."
+    },
+    {
+        "nome": "Roc",
+        "tipo": "Normal",
+        "familia": "Monstruosidade",
+        "nivel": 17,
+        "descricao": "HP: 195; Gargantuan; • Pluck Up. (Reach 4, target up to 2 creatures) 3d12+20. On hit: Grappled (escape DC 18). OR:\n• Crush & Drop. Fly upward 20 spaces, deal 20 damage to Grappled creatures, then release (10d6 fall damage)."
+    },
+    {
+        "nome": "Vampire Outlander",
+        "tipo": "Normal",
+        "familia": "Morto-Vivo",
+        "nivel": 17,
+        "descricao": "HP: 200; Sunscorn. Radiant deals + 10 damage to you.\nPredation: Advantage VS Bloodied creatures.\nHunter's Bola: (1/ Round) When crit, Restrain them (escape DC 18, or 2 actions).\nCall of the Wild. (If you have no minions) Summon 1 Wolf minion/hero (d10, speed 10). Then:\n• Feed. (if you have advantage) 1d20+30 damage and 1 Wound. OR: • Crossbow. (Range 8) 1d10+20."
+    },
+    {
+        "nome": "Executor",
+        "tipo": "Normal",
+        "familia": "Infernal",
+        "nivel": 18,
+        "descricao": "HP: 270; Large; Torment. (Reach 8) Select up to 3 enemies, each must SECRETLY choose: • Courage. Suffer 2d20 damage. • Cowardice. Take no damage. If ALL choose Cowardice, Suffer 2d20 damage and 1 Wound."
+    },
+    {
+        "nome": "Nalfeshnee",
+        "tipo": "Normal",
+        "familia": "Infernal",
+        "nivel": 19,
+        "descricao": "HP: 290; Large; • Spellthief. Cast a spell you saw cast this round. OR:\n• Ichorbolt. (Range 6) d66 to creatures in a 3x3 area."
+    },
+    {
+        "nome": "Storm Giant",
+        "tipo": "Normal",
+        "familia": "Gigante",
+        "nivel": 19,
+        "descricao": "HP: 290; Huge; Mighty Strikes. Treat dice you roll less than 10, as 10.\n• Thunderstride. 2d20 damage to any enemies within Reach 2 of your movement this round. OR:\n• Lightning Spear. (Reach 8) 2d20+30. Deal Primary Die damage to the next nearest enemy.\nBloodied: Forked Lightning. (Reaction: at 145 HP) 4d20 divided as you wish among up to 4 different creatures, on damage Dazed."
+    },
+    {
+        "nome": "Vampire (Fullblood)",
+        "tipo": "Normal",
+        "familia": "Morto-Vivo",
+        "nivel": 19,
+        "descricao": "HP: 230; Sunscorn. Radiant deals + 10 damage to you.\nPredation: Advantage VS Bloodied creatures.\nBatform: (1/round) Reaction, temporarily turn into a cloud of bats and teleport 6 spaces.\nEnthrall. (Range 12) DC 20 WIL Save or Enthralled, on save 10 Psychic damage. Then:\n• Feed. (If you have advantage or an Enthralled target) 1d20+40 damage and 1 Wound. OR: • Sanguine Strike (2x). 1d10+20 (Reach 2)."
+    },
+    {
         "nome": "Caerys, the Hollow Star",
         "tipo": "Lendario",
+        "familia": "Aberração",
         "nivel": 20,
         "descricao": "HP: 620; Ravages of Time. At the beginning of each round, all heroes suffer 1 Wound.\nSlipstream: 3/encounter when she would suffer any negative effect she can swap places with a creature of her choice making them the target instead. All heroes recover 1 Wound.\nACTIONS: After each hero's turn, choose 1 not yet chosen (reset when all have been chosen):\n• Wormhole. Teleport 12. 3d20 to a creature adjacent to where you began or ended.\n• Immensity. (Reach 12) DC 20 STR save (disadvantage if within Reach 4) or suffer 3d20 damage and Prone. Half on save.\n• Glimpse Your End. DC 20 WIL save or DOOMED: Concentration ends, the next damage roll against you is maximized.\n• Plasma Storm. Reach 6, DC 20 DEX save or 2d20 lightning and 2d20 fire damage. Half on save.\n• Singularity. Reach 2, 5d20 bludgeoning damage.\n• Almighty Push & Pull. (Range 12) DC 20 STR save or be launched 20 ft. into the air, repeat until the target saves. Fall damage for this attack is 1d20 for every 10 ft. fallen.\nBLOODIED: At 310 HP, Gravitational Mastery. Move ALL objects and creatures within 16 spaces anywhere else within the area. Gravitational Lensing. The hero with the most HP is marked by Caerys. She takes half damage from all sources, her mark takes the other half. This lasts until the mark drops to 0 HP.\nLAST STAND: Use Gravitational Mastery, then Caerys is dying! 200 more damage and she dies. Until then she chooses twice each turn. If still alive after 1 round: Reset Time: she resets back to full HP."
+    },
+    {
+        "nome": "Death Knight Regent",
+        "tipo": "Normal",
+        "familia": "Morto-Vivo",
+        "nivel": 20,
+        "descricao": "HP: 160; Large; Merciless Aura. Enemies within Reach 4 cannot regain HP, when healed they instead suffer 4d10 damage.\n• Doomblade. 1d10+40 (Req: DC 20 WIL save to Interpose). Then: • Call Servant. Summon 2 Grave Crows and 2 Grave Squires within Reach 12.\nREACTION (2 uses) Gravewalk. Instantly descend into the earth and errupt from the ground up to 12 spaces away. Creatures within Reach 4 are knocked Prone on a failed DC 20 DEX save."
+    },
+    {
+        "nome": "Mummy Lord",
+        "tipo": "Normal",
+        "familia": "Morto-Vivo",
+        "nivel": 21,
+        "descricao": "HP: 280; Cursed Gaze. When crit: DC 20 INT save, or suffer 1 Wound.\n• Scarab Swarm. Summon 10 scarab minions (d6) within 6 spaces. Then:\n• Slam (2x). 1d4+20 On damage: Dazed."
     }
 ]

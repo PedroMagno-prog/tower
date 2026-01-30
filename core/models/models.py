@@ -1,10 +1,11 @@
 
 class Monstro:
 
-    def __init__(self, nome, tipo, nivel, descricao=None):
+    def __init__(self, nome, tipo, familia, nivel, descricao=None):
 
         self.nome = nome
         self.tipo = tipo
+        self.familia = familia
         self.nivel = nivel
         self.descricao = descricao
 

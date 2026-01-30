@@ -1,6 +1,6 @@
 from scipy.interpolate import lagrange
 from random import choices
-from .util import convert_dificuldade
+from util import convert_dificuldade
 
 """
             Andar 1
@@ -65,13 +65,12 @@ def abrir_bau(andar:int, n_players:int) -> list:
     return list((choices(raridades, weights=pesos)[0]) for _ in range(n_players))
 
 def gerar_encontro(nivel_party):
-    dificuldade = int(input("Qual dificuldade deve ser o encontro? --> "))
-
-    # level total dos monstros deve ser a soma dos niveis dos players
+    dificuldade = input("Qual a dificuldade do encontro que acabaram de ter?\n"
+                        "   digite: facil, normal, dificil, letal ou impossivel: ")
+    dificuldade = convert_dificuldade(dificuldade)
+    nivel_monstros_max = (dificuldade/100) * nivel_party
+    print(nivel_monstros_max)
     pass
 
-# raro = rng_rarity(20,20)
-# print(raro)
-# print(abrir_bau(80, 50, 4))
-
-print(abrir_bau(78, 4))
+# print(abrir_bau(78, 4))
+# gerar_encontro(20)
