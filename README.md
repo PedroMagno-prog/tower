@@ -36,5 +36,4 @@ You need Python installed. This project relies on scientific libraries for its R
 
 1. **Clone the repository**
    ```bash
-   git clone [https://github.com/YOUR-USERNAME/PROJECT-NAME.git](https://github.com/YOUR-USERNAME/PROJECT-NAME.git)
-   cd PROJECT-NAME
+   git clone https://github.com/PedroMagno-prog/tower.git
