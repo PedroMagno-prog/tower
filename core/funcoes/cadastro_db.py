@@ -1,13 +1,15 @@
 import json
 import os
 from core.models.models import Monstro, Loot
-# --- Nosso "Database" em Memória ---
 
-# Esses são os nomes dos arquivos que vamos usar
-ARQUIVO_MONSTROS = "banco\monstros.json"
-ARQUIVO_LOOTS = "banco\loots.json"
+from core.cores import RED, END_COLOR, LIGHTBLUE
 
-# Essas listas vão guardar os OBJETOS em memória enquanto o programa roda
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+CORE_DIR = os.path.dirname(BASE_DIR)
+
+ARQUIVO_MONSTROS = os.path.join(CORE_DIR, "banco", "monstros.json")
+ARQUIVO_LOOTS = os.path.join(CORE_DIR, "banco", "loots.json")
+
 lista_monstros = []
 lista_loots = []
 
@@ -27,9 +29,9 @@ def salvar_dados():
     pass
 
 
-def carregar_dados():
+def carregar_dados_monstros(retorno=False):
     """Carrega os dados dos arquivos JSON para as listas em memória."""
-    global lista_monstros, lista_loots
+    global lista_monstros
 
     # --- Carrega Monstros ---
     if os.path.exists(ARQUIVO_MONSTROS):
@@ -38,6 +40,15 @@ def carregar_dados():
             dados_monstros = json.load(f)
             # 2. Recria os objetos Monster a partir dos dicionários
             lista_monstros = [Monstro(**dados) for dados in dados_monstros]
+    if retorno:
+        return lista_monstros
+    print(f"\n{RED}Function: carregar_dados_monstros{END_COLOR}")
+    print(f"{LIGHTBLUE}Dados carregados: {len(lista_monstros)} monstros{END_COLOR}")
+
+
+def carregar_dados_loots():
+    """Carrega os dados dos arquivos JSON para as listas em memória."""
+    global lista_loots
 
     # --- Carrega Loots ---
     if os.path.exists(ARQUIVO_LOOTS):
@@ -46,8 +57,8 @@ def carregar_dados():
             # O **dados é um atalho para "desempacotar" o dicionário
             # É o mesmo que: Loot(nome=dados['nome'], raridade=dados['raridade'], ...)
             lista_loots = [Loot(**dados) for dados in dados_loots]
-
-    print(f"Dados carregados: {len(lista_monstros)} monstros, {len(lista_loots)} loots.")
+    print(f"\n{RED}Function: carregar_dados_monstros{END_COLOR}")
+    print(f"{LIGHTBLUE}Dados carregados: {len(lista_loots)} loots.{END_COLOR}")
 
 def cadastro_monstro():
     print("Vamos cadastrar alguns monstros! (digite 'nimble' no CAMPO nome para sair)")
@@ -67,9 +78,11 @@ def cadastro_monstro():
                 tipo = "Minion"
             else:
                 raise Exception
+            familia = "Neutro"
+            print("Salvando o Monstro como na Família Neutra (Só spawna quando o encontro é randômico")
             nivel = float(input("Qual o nível dele? --> "))
             descricao = input("Descreva o monstro (opcional) \n-->")
-            novo_monstro = Monstro(nome=nome, tipo=tipo, nivel=nivel, descricao=descricao)
+            novo_monstro = Monstro(nome=nome, tipo=tipo, familia=familia, nivel=nivel, descricao=descricao)
             lista_monstros.append(novo_monstro)
             print(f"\nMonstro '{novo_monstro.nome}' foi cadastrado. Não esqueça de salvar!")
         except:
