@@ -1,14 +1,18 @@
-from funcoes.util import calcular_nivel_party
-from funcoes.rng import abrir_bau, gerar_encontro
-from funcoes.cadastro_db import (
-    carregar_dados,
-    salvar_dados,
-    criar_monstro,
-    cadastro_monstro,
-    cadastro_loot,
-    ver_monstros,
-    ver_loots
-)
+# from funcoes.util import calcular_nivel_party
+# from funcoes.rng import abrir_bau, gerar_encontro
+# from funcoes.cadastro_db import (
+#     carregar_dados_monstros,
+#     carregar_dados_loots,
+#     salvar_dados,
+#     criar_monstro,
+#     cadastro_monstro,
+#     cadastro_loot,
+#     ver_monstros,
+#     ver_loots
+# )
+from funcoes.cadastro_db import *
+from funcoes.util import *
+from funcoes.rng import *
 
 valor_em_po = {} # tabelar raridade com um valor X em PO
 
@@ -57,7 +61,8 @@ def menu(nivel_party, andar, n_players):
     pass
 
 def main():
-    carregar_dados()
+    carregar_dados_monstros()
+    carregar_dados_loots()
     while True:
         print("="*20 + "Bem-Vindo Criador_Dev!" + "="*20)
         print()

@@ -1,6 +1,8 @@
 from scipy.interpolate import lagrange
-from random import choices
-from util import convert_dificuldade
+from core.funcoes.cadastro_db import carregar_dados_monstros
+from random import choice, choices
+from core.funcoes.util import convert_dificuldade, listar_monstros_por_familia
+
 
 """
             Andar 1
@@ -65,11 +67,58 @@ def abrir_bau(andar:int, n_players:int) -> list:
     return list((choices(raridades, weights=pesos)[0]) for _ in range(n_players))
 
 def gerar_encontro(nivel_party):
-    dificuldade = input("Qual a dificuldade do encontro que acabaram de ter?\n"
-                        "   digite: facil, normal, dificil, letal ou impossivel: ")
-    dificuldade = convert_dificuldade(dificuldade)
+    dificuldade = 0
+    while dificuldade == 0:
+        try:
+            dificuldade = input("Qual a dificuldade do encontro que acabaram de ter?\n"
+                                "   digite: facil, normal, dificil, letal ou impossivel: ")
+            dificuldade = convert_dificuldade(dificuldade)
+        except:
+            dificuldade = 0
     nivel_monstros_max = (dificuldade/100) * nivel_party
-    print(nivel_monstros_max)
+    print(f"O nível total dos monstros será: {nivel_monstros_max}")
+
+    familia = input(""
+        "\n==> Bandido: Humanos fora da lei."
+        "\n==> Goblin: Goblins, Bugbears e Hobgoblins. "
+        "\n==> Kobold: Kobolds."
+        "\n==> Morto-Vivo: Esqueletos, Zumbis, Múmias, Vampiros, Cavaleiros da Morte, etc."
+        "\n==> Homem-Cobra: Snakemen."
+        "\n==> Troglodita: Troglodytes."
+        "\n==> Planta: Monstros vegetais (Seedlings, Treants)."
+        "\n==> Fada: Criaturas feéricas (Sprites, Gremlins, Mav)."
+        "\n==> Infernal: Demônios e diabos (Fiends)."
+        "\n==> Fera: Animais (Lobos, Raptors, Morcegos) e criaturas bestiais."
+        "\n==> Cultista: Humanos fanáticos."
+        "\n==> Gnoll: Gnolls."
+        "\n==> Limo: Oozes e Gelatinas."
+        "\n==> Dragão: Drakes e Dragões."
+        "\n==> Aranha: Aranhas gigantes e ettercaps."
+        "\n==> Monstruosidade: Criaturas híbridas ou não-naturais (Mimicos, Grifos, Quimeras, Aberrações)."
+        "\n==> Constructo: Máquinas de mana (Scions, Hulks, Titans)"
+        "\n==> Humanoide: NPCs gerais (Druidas, Magos)."
+        "\n==> Homem-Lagarto: Lizardfolk."
+        "\n==> Orc: Orcs."
+        "\n==> Gigante: Gigantes, Trolls e Ogros."
+        "\n==> Elfo Negro: Drow e Driders."
+        "\n==> Aberração: Criaturas alienígenas ou psíquicas (Cloakers, Ul'vek, Dravok)."
+        "\n\nQual família de monstros vai compôr o encontro? Ou não escreva nada para usar todos: ")
+
+    lista_monstros = carregar_dados_monstros(True)
+    lista_monstros_final = listar_monstros_por_familia(lista_monstros, familia)
+
+    soma_nivel_monstros = 0
+    encontro = list()
+
+    while soma_nivel_monstros < nivel_monstros_max:
+        monstro = choice(lista_monstros_final)
+        if monstro.nivel+soma_nivel_monstros > nivel_monstros_max:
+            continue
+        encontro.append(monstro)
+        soma_nivel_monstros += monstro.nivel
+    for m in encontro:
+        print(m)
+
     pass
 
 # print(abrir_bau(78, 4))

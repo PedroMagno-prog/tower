@@ -21,18 +21,19 @@ for x in range(ficha):
 
 from scipy.interpolate import lagrange
 import numpy as np
+from random import choice
 
 # Exemplo de uso com scipy
 x = [1, 50, 100]
 y = [80, 55, 10]
 
 # Cria a função do polinômio interpolador
-poly = lagrange(x, y)
-
-# Estima um valor
-print(poly(90))
-
-print("="*56)
+# poly = lagrange(x, y)
+#
+# # Estima um valor
+# print(poly(90))
+#
+# print("="*56)
 
 # C = 80
 # D = int(input("Dif: --> "))
@@ -40,3 +41,9 @@ print("="*56)
 # D_redutor = C -(C * (D/100))
 # print(D_redutor)
 # print(C-D_redutor)
+print()
+lista = ["Silêncio dos Inocentes", "Ilha do Medo", "Fratura", "Bastardos Inglórios",
+         "Corra", "Prenda-me se for Capaz", "Parasita", "Matrix",
+         "História de um Casamento", "H20 Meninas"]
+
+print(choice(lista))
