@@ -1,6 +1,6 @@
-from Tools.pynche.ColorDB import get_colordb
 
-# Outras cores
+
+# Outras colors
                    # BACKGROUND
 BLACK = '\033[30m' # 40
 RED = '\033[31m'

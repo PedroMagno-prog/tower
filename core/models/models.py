@@ -1,26 +1,26 @@
-class Monstro:
+class Monster:
 
-    def __init__(self, nome, tipo, familia, nivel, descricao=None):
+    def __init__(self, name, type, family, level, description=None):
 
-        self.nome = nome
-        self.tipo = tipo
-        self.familia = familia
-        self.nivel = nivel
-        self.descricao = descricao
+        self.name = name
+        self.type = type
+        self.family = family
+        self.level = level
+        self.description = description
 
     def __str__(self):
-        # Isso ajuda a identificar o objeto no admin do Django
-        return f"{self.nome} (Nível {self.nivel})"
+        # This helps to identify the object in the Django admin
+        return f"{self.name} (Level {self.level})"
 
 
 class Loot:
 
-    def __init__(self, nome, raridade, valor, descricao=None):
+    def __init__(self, name, rarity, value, description=None):
 
-        self.nome = nome
-        self.raridade = raridade
-        self.valor = valor
-        self.descricao = descricao
+        self.name = name
+        self.rarity = rarity
+        self.value = value
+        self.description = description
 
     def __str__(self):
-        return f"Loot: {self.nome}, Raridade: {self.raridade}, Valor: {self.valor}"
+        return f"Loot: {self.name}, Rarity: {self.rarity}, Value: {self.value}"
