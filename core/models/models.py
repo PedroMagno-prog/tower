@@ -1,33 +1,31 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from enum import Enum
 
 
+@dataclass
 class Monster:
 
-    def __init__(self, name, type, family, level, description=None):
-
-        self.name = name
-        self.type = type
-        self.family = family
-        self.level = level
-        self.description = description
+    name:        str
+    type:        str
+    family:      str
+    level:       float
+    description: str = None
 
     def __str__(self):
         # This helps to identify the object in the Django admin
         return f"{self.name} (Level {self.level})"
 
-
+@dataclass
 class Loot:
-
-    def __init__(self, name, rarity, value, description=None):
-
-        self.name = name
-        self.rarity = rarity
-        self.value = value
-        self.description = description
+    name:        str
+    rarity:      str
+    value:       int
+    description: str = None
 
     def __str__(self):
         return f"Loot: {self.name}, Rarity: {self.rarity}, Value: {self.value}"
+
+# --- Enums ---
 
 class ArmorType(Enum):
     none = "None"
@@ -41,18 +39,19 @@ class CharSize(Enum):
     Medium = "Medium"
     Large = "Large"
 
+# --- Componentes do Personagem ---
+
 @dataclass
 class Archetype:
-
     name:         str
-    key_stats:    list
+    key_stats:    list[str]
     hit_die:      int
     level1_hp:    int
-    saves:        dict
+    saves:        dict[str, int]
     armor_prof:   ArmorType
-    weapons_prof: list
-    start_gear:   list
-    features:     dict
+    weapons_prof: list[str]
+    start_gear:   list[str]
+    features:     dict[int, list[str]]
 
 @dataclass
 class Ancestry:
@@ -83,6 +82,8 @@ class Skills:
     perception: int
     stealth: int
 
+# --- Main Class: CHARACTER ---
+
 @dataclass
 class Character:
     name:       str
@@ -91,23 +92,33 @@ class Character:
     stats:      Stats
     skills:     Skills
     armor:      int
+
     level:      int = 1  # initial
     speed:      int = 6 #default
-    initiative: int = stats.DEX #default
-    hp_max:     int = archetype.level1_hp #initial
-    hp:         int = hp_max #default
-    hd_max:     int = level #default
-    hd:         int = hd_max
-    wounds_max: int = 6 #default
-    wounds:     int = 0 #initial
-    mana_max:   int = 0
-    inv_slots:  int = 10+stats.STR #default
 
-    @level.setter
-    def _level(self, value):
-        if not (1 <= value <= 20):
+    initiative: int = field(init=False)
+    hp_max:     int = field(init=False)
+    hp:         int = field(init=False)
+    hd_max:     int = field(init=False)
+    hd:         int = field(init=False)
+    wounds_max: int = 6
+    wounds:     int = 0
+    mana_max:   int = 0
+    inv_slots:  int = field(init=False)
+
+    def __post_init__(self):
+        # 1. Validação do nível
+        if not (1 <= self.level <= 20):
             raise ValueError("O nível deve estar entre 1 e 20!")
-        self.level = value
+
+        # 2. Cálculo dos atributos dependentes
+        # Agora sim temos acesso a self.stats e self.archetype
+        self.initiative = self.stats.DEX
+        self.hp_max = self.archetype.level1_hp
+        self.hp = self.hp_max
+        self.hd_max = self.level
+        self.hd = self.hd_max
+        self.inv_slots = 10 + self.stats.STR
 
 """
 class Archetype:
