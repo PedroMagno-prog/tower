@@ -11,3 +11,13 @@ Criando a Primeira fase do Tower
         Gerador de Encontros
         Gerador de Loots
         Classe e Personagem principal
+
+***
+
+Classes
+
+    Classes Iniciais:
+        Berserker STR & DEX
+        Hunter    DEX & WIL
+        Mage      INT & WIL
+        Shepherd  WIL & STR
