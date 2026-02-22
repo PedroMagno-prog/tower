@@ -18,6 +18,7 @@ LIGHTCYAN = '\033[96m'
 
 RESET = '\033[0m'
 BOLD = '\033[1m'
+ITALIC = '\033[3m'
 UNDERLINE = '\033[4m'
 
 # --- Cyberpunk ---
@@ -70,24 +71,24 @@ BODY = WHITE             # (Standard text)
 FOOTER = LIGHTGREY       # Shadows
 
 
-print(f"{H1}--- MY PROGRAM v1.0 ---{RESET}")
-print(f"{H2}Settings loaded{RESET}")
-print(f"{H3}Settings loaded{RESET}")
-print(f"{H4}Settings loaded{RESET}")
-print(f"{BODY}The system is operating normally.{RESET}")
-print(f"{FOOTER} Press CTRL+C to exit {RESET}")
-
-print()
-
-def print_h1(texto):
-    print(f"{H1}══ {texto.upper()} ══{RESET}")
-
-def print_caixa(texto):
-    print(f"{H3}┌────────────────────────────┐")
-    print(f"│ {BODY}{texto.center(26)}{H3} │")
-    print(f"└────────────────────────────┘{RESET}")
-
-# Usage example:
-print_h1("The Dragon's Awakening")
-print(f"{BODY}You enter a cold room...{RESET}")
-print_caixa("IRON SWORD FOUND")
+# print(f"{H1}--- MY PROGRAM v1.0 ---{RESET}")
+# print(f"{H2}Settings loaded{RESET}")
+# print(f"{H3}Settings loaded{RESET}")
+# print(f"{H4}Settings loaded{RESET}")
+# print(f"{BODY}The system is operating normally.{RESET}")
+# print(f"{FOOTER} Press CTRL+C to exit {RESET}")
+#
+# print()
+#
+# def print_h1(texto):
+#     print(f"{H1}══ {texto.upper()} ══{RESET}")
+#
+# def print_caixa(texto):
+#     print(f"{H3}┌────────────────────────────┐")
+#     print(f"│ {BODY}{texto.center(26)}{H3} │")
+#     print(f"└────────────────────────────┘{RESET}")
+#
+# # Usage example:
+# print_h1("The Dragon's Awakening")
+# print(f"{BODY}You enter a cold room...{RESET}")
+# print_caixa("IRON SWORD FOUND")
