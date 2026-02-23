@@ -1,5 +1,5 @@
 from core.colors import *
-
+from core.functions.manager_db import load_archetype_data
 print(f"{HIGHLIGHT}===================================={RESET}")
 print(f"{HIGHLIGHT}{BOLD}            THE TOWER               {RESET}")
 print(f"{HIGHLIGHT}===================================={RESET}")
@@ -8,8 +8,10 @@ print(f"\n{H1}~~~WHO YOU ARE??~~~{RESET}\n")
 
 
 def menu_criacao_personagem():
-
+    load_archetype_data()
     print(f"{H4}Choose your class: {RESET}")
+    for i in range(12):
+        print(f"[{1}] {}")
     print("[1] Barbarian")
     print("[2] Hunter")
     print("[3] Wizard")
