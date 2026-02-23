@@ -1,7 +1,7 @@
 from scipy.interpolate import lagrange
-from functions.manager_db import load_monster_data
+from core.functions.manager_db import load_monster_data
 from random import choice, choices
-from functions.useful import convert_difficulty, list_monsters_by_family
+from core.functions.useful import convert_difficulty, list_monsters_by_family
 
 
 """

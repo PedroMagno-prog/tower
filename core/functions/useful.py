@@ -1,4 +1,4 @@
-from colors import RED, END_COLOR
+from core.colors import RED, RESET
 
 family_list = ["Aberration", "Spider", "Bandit", "Construct", "Cultist", "Dragon", "Drow",
     "Fey", "Beast", "Giant", "Gnoll", "Goblin", "Snakeman", "Lizardfolk", "Humanoid", "Fiend",
@@ -8,7 +8,7 @@ def calculate_party_level(level: int, n_players: int) -> int:
     return level * n_players
 
 def convert_difficulty(difficulty: str) -> int:
-    print(f"{RED}Function: convert_difficulty{END_COLOR}")
+    print(f"{RED}Function: convert_difficulty{RESET}")
     difficulty = difficulty.strip().lower()
     difficulties = {"easy": 50, "e": 50,
                     "normal": 75, "n": 75,
@@ -18,7 +18,7 @@ def convert_difficulty(difficulty: str) -> int:
     return difficulties[difficulty]
 
 def list_monsters_by_family(unfiltered_monster_list:list, family:str)-> list:
-    print(f"{RED}Function: list_monsters_by_family{END_COLOR}")
+    print(f"{RED}Function: list_monsters_by_family{RESET}")
     monster_list = list()
     for monster in unfiltered_monster_list:
         if monster.type != "Legendary":

@@ -44,7 +44,7 @@ def menu(party_level, floor, n_players):
         '5': lambda: create_monster(),
         '6': lambda: generate_encounter(party_level),
         '7': lambda: open_chest(floor, n_players),
-        '10': lambda: save_data()
+        '10': lambda: save_all_data()
     }
     # 1. Use .get() to fetch functions.
     # 2. If 'option' (e.g., '1') exists, 'function_to_execute'
@@ -61,8 +61,7 @@ def menu(party_level, floor, n_players):
     pass
 
 def main():
-    load_monster_data()
-    load_loot_data()
+    load_all_data()
     while True:
         print("="*20 + "Welcome Creator_Dev!" + "="*20)
         print()

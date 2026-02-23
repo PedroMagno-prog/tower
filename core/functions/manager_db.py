@@ -11,27 +11,34 @@ MONSTERS_FILE = os.path.join(CORE_DIR, "database", "monsters.json")
 LOOTS_FILE = os.path.join(CORE_DIR, "database", "loots.json")
 ARCHETYPES_FILE = os.path.join(CORE_DIR, "database", "archetypes.json")
 
-monster_list = []
-loot_list = []
-archetypes_list = []
 
 # --- Main Class: CHARACTER ---
 
-def save_data():
+def save_all_data():
     # Save lists created during runtime to JSON files
     print("Saving data...")
 
     monsters_data = [monster.__dict__ for monster in monster_list]
     loots_data = [loot.__dict__ for loot in loot_list]
+    archetypes_data = [loot.__dict__ for loot in archetype_list]
 
     with open(MONSTERS_FILE, 'w', encoding='utf-8') as f:
         json.dump(monsters_data, f, indent=4, ensure_ascii=False)
     with open(LOOTS_FILE, 'w', encoding='utf-8') as f:
         json.dump(loots_data, f, indent=4, ensure_ascii=False)
+    with open(ARCHETYPES_FILE, 'w', encoding='utf-8') as f:
+        json.dump(archetypes_data, f, indent=4, ensure_ascii=False)
 
     print("Data saved successfully!")
     pass
 
+def load_all_data():
+    try:
+        load_monster_data()
+        load_loot_data()
+        load_archetype_data()
+    except:
+        print("Something went wrong")
 
 def load_monster_data(return_list=False):
     """Loads data from JSON files into memory lists."""
@@ -46,8 +53,9 @@ def load_monster_data(return_list=False):
             monster_list = [Monster(**data) for data in monsters_data]
     if return_list:
         return monster_list
-    print(f"\n{RED}Function: load_monster_data{RESET}")
-    print(f"{LIGHTBLUE}Data loaded: {len(monster_list)} monsters{RESET}")
+    else:
+        print(f"{RED}Function: load_monster_data{RESET}")
+        print(f"{LIGHTBLUE}Data loaded: {len(monster_list)} monsters{RESET}\n")
 
 
 def load_loot_data(return_list=False):
@@ -61,14 +69,15 @@ def load_loot_data(return_list=False):
             # **data is a shortcut to unpack the dictionary
             # It's the same as: Loot(name=data['name'], rarity=data['rarity'], ...)
             loot_list = [Loot(**data) for data in loots_data]
-        if return_list:
-            return monster_list
-    print(f"\n{RED}Function: load_loot_data{RESET}")
-    print(f"{LIGHTBLUE}Data loaded: {len(loot_list)} loots.{RESET}")
+    if return_list:
+        return loot_list
+    else:
+        print(f"{RED}Function: load_loot_data{RESET}")
+        print(f"{LIGHTBLUE}Data loaded: {len(loot_list)} loots.{RESET}\n")
 
 def load_archetype_data(return_list=False):
     """Loads data from JSON files into memory lists."""
-    global archetypes_list
+    global archetype_list
 
     # --- Load Loots ---
     if os.path.exists(ARCHETYPES_FILE):
@@ -76,11 +85,12 @@ def load_archetype_data(return_list=False):
             archetypes_data = json.load(f)
             # **data is a shortcut to unpack the dictionary
             # It's the same as: Loot(name=data['name'], rarity=data['rarity'], ...)
-            archetypes_list= [Loot(**data) for data in archetypes_data]
-        if return_list:
-            return monster_list
-    print(f"\n{RED}Function: load_archetype_data{RESET}")
-    print(f"{LIGHTBLUE}Data loaded: {len(archetypes_list)} archetypes.{RESET}")
+            archetype_list= [Archetype(**data) for data in archetypes_data]
+    if return_list:
+        return archetype_list
+    else:
+        print(f"{RED}Function: load_archetype_data{RESET}")
+        print(f"{LIGHTBLUE}Data loaded: {len()} archetypes.{RESET}\n")
 
 def register_monster():
     print("Let's register some monsters! (type 'nimble' in the NAME field to exit)")

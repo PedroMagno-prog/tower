@@ -44,14 +44,14 @@ class CharSize(Enum):
 @dataclass
 class Archetype:
     name:         str
-    key_stats:    list[str]
+    key_stats:    list #[str]
     hit_die:      int
     level1_hp:    int
-    saves:        dict[str, int]
+    saves:        dict #[str, int]
     armor_prof:   ArmorType
-    weapons_prof: list[str]
-    start_gear:   list[str]
-    features:     dict[int, list[str]]
+    weapons_prof: list #[str]
+    start_gear:   list #[str]
+    features:     dict #[int, list[str]]
 
 @dataclass
 class Ancestry:
