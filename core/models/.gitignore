@@ -1,4 +1,3 @@
-garbage/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
@@ -211,5 +210,5 @@ __marimo__/
 
 # Testes & Trash
 trash/
-core/funcoes/estudo.py
+core/functions/estudo.py
 core/testes.py

@@ -1,0 +1,82 @@
+[
+    {
+        "name": "Flecher",
+        "archetype": {
+            "name": "Hunter",
+            "key_stats": [
+                "DEX",
+                "WIL"
+            ],
+            "hit_die": 8,
+            "level1_hp": 13,
+            "saves": {
+                "str_Save": 0,
+                "dex_Save": 1,
+                "int_Save": -1,
+                "wil_Save": 0
+            },
+            "armor_prof": {
+                "_value_": "Leather",
+                "_name_": "leather",
+                "__objclass__": "{'_generate_next_value_': <staticmethod(<function Enum._generate_next_value_ at 0x000002169FD382C0>)>, '__module__': 'core.models.models', '__firstlineno__': 30, '__static_attributes__': (), '_new_member_': <built-in method __new__ of type object at 0x00007FFC16D70700>, '_use_args_': False, '_member_names_': ['none', 'cloth', 'leather', 'mail', 'plate'], '_member_map_': {'none': <ArmorType.none: 'None'>, 'cloth': <ArmorType.cloth: 'Cloth'>, 'leather': <ArmorType.leather: 'Leather'>, 'mail': <ArmorType.mail: 'Mail'>, 'plate': <ArmorType.plate: 'Plate'>}, '_value2member_map_': {'None': <ArmorType.none: 'None'>, 'Cloth': <ArmorType.cloth: 'Cloth'>, 'Leather': <ArmorType.leather: 'Leather'>, 'Mail': <ArmorType.mail: 'Mail'>, 'Plate': <ArmorType.plate: 'Plate'>}, '_unhashable_values_': [], '_unhashable_values_map_': {}, '_member_type_': <class 'object'>, '_value_repr_': None, '__doc__': None, 'none': <ArmorType.none: 'None'>, 'cloth': <ArmorType.cloth: 'Cloth'>, 'leather': <ArmorType.leather: 'Leather'>, 'mail': <ArmorType.mail: 'Mail'>, 'plate': <ArmorType.plate: 'Plate'>, '__new__': <function Enum.__new__ at 0x000002169FD38040>}",
+                "_sort_order_": 2
+            },
+            "weapons_prof": [
+                "*DEX"
+            ],
+            "start_gear": [
+                "Shortbow",
+                "Cheap Hides",
+                "Dagger",
+                "Hunting Trap"
+            ],
+            "features": {
+                "1": [
+                    "Hunter's Mark",
+                    "Forager"
+                ]
+            }
+        },
+        "ancestry": {
+            "name": "Human",
+            "size": {
+                "_value_": "Medium",
+                "_name_": "Medium",
+                "__objclass__": "{'_generate_next_value_': <staticmethod(<function Enum._generate_next_value_ at 0x000002169FD382C0>)>, '__module__': 'core.models.models', '__firstlineno__': 37, '__static_attributes__': (), '_new_member_': <built-in method __new__ of type object at 0x00007FFC16D70700>, '_use_args_': False, '_member_names_': ['Small', 'Medium', 'Large'], '_member_map_': {'Small': <CharSize.Small: 'Small'>, 'Medium': <CharSize.Medium: 'Medium'>, 'Large': <CharSize.Large: 'Large'>}, '_value2member_map_': {'Small': <CharSize.Small: 'Small'>, 'Medium': <CharSize.Medium: 'Medium'>, 'Large': <CharSize.Large: 'Large'>}, '_unhashable_values_': [], '_unhashable_values_map_': {}, '_member_type_': <class 'object'>, '_value_repr_': None, '__doc__': None, 'Small': <CharSize.Small: 'Small'>, 'Medium': <CharSize.Medium: 'Medium'>, 'Large': <CharSize.Large: 'Large'>, '__new__': <function Enum.__new__ at 0x000002169FD38040>}",
+                "_sort_order_": 1
+            },
+            "bonus": {}
+        },
+        "stats": {
+            "STR": 0,
+            "DEX": 2,
+            "INT": -1,
+            "WIL": 2
+        },
+        "skills": {
+            "arcana": 0,
+            "craft": 0,
+            "examination": 0,
+            "finesse": 0,
+            "influence": 0,
+            "insight": 0,
+            "lore": 0,
+            "might": 0,
+            "naturecraft": 0,
+            "perception": 0,
+            "stealth": 0
+        },
+        "armor": 5,
+        "level": 1,
+        "speed": 6,
+        "wounds_max": 6,
+        "wounds": 0,
+        "mana_max": 0,
+        "initiative": 2,
+        "hp_max": 13,
+        "hp": 13,
+        "hd_max": 1,
+        "hd": 1,
+        "inv_slots": 10
+    }
+]

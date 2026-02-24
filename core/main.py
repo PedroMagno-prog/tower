@@ -1,84 +1,83 @@
-# from funcoes.util import calcular_nivel_party
-# from funcoes.rng import abrir_bau, gerar_encontro
-# from funcoes.cadastro_db import (
-#     carregar_dados_monstros,
-#     carregar_dados_loots,
-#     salvar_dados,
-#     criar_monstro,
-#     cadastro_monstro,
-#     cadastro_loot,
-#     ver_monstros,
-#     ver_loots
-# )
-from funcoes.cadastro_db import *
-from funcoes.util import *
-from funcoes.rng import *
+import sys
+import os
+# Add the project root (tower) to sys.path so that absolute imports work regardless of how the script is run.
+current_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.dirname(current_dir)
+if project_root not in sys.path:
+    sys.path.insert(0, project_root)
 
-valor_em_po = {} # tabelar raridade com um valor X em PO
+from core.functions.manager_db import *
+from core.functions.useful import *
+from core.functions.rng import *
+
+value_in_gp = {} # table rarity with a value X in GP
 
 
-def menu(nivel_party, andar, n_players):
-    # menu que processa uma única vez. No Main temos o loop infinito
+def menu(party_level, floor, n_players):
+    # menu that processes once. In Main we have the infinite loop
     print("=" * 56,
-          "\nEscolha uma opção:"
-          "\n(1) Cadastrar Monstro"
-          "\n(2) Cadastrar Loot"
-          "\n(3) Ver Monstros"
-          "\n(4) Ver Loot"
-          "\n(5) Criar um Monstro"
-          "\n(6) Gerar um Encontro"
-          "\n(7) Abrir um Baú"
-          "\n\n(10) SALVAR"
-          "\nDigite qualquer outro valor pra sair para sair"
+          "\nChoose an option:"
+          "\n(1) Register Monster"
+          "\n(2) Register Loot"
+          "\n(3) View Monsters"
+          "\n(4) View Loot"
+          "\n(5) Create a Monster"
+          "\n(6) Generate an Encounter"
+          "\n(7) Open a Chest"
+          "\n\n(10) SAVE"
+          "\nType any other value to exit"
           )
     print("=" * 56)
-    opcao = input("--> ")
-    # --- O "Dispatch Table" (Dicionário de Opções) ---
-    # Usamos 'lambda' para "atrasar" a execução das funções
-    # e para conseguir passar os argumentos corretos (nivel_party, andar).
-    opcoes = {
-        '1': lambda: cadastro_monstro(),
-        '2': lambda: cadastro_loot(),
-        '3': lambda: ver_monstros(),
-        '4': lambda: ver_loots(),
-        '5': lambda: criar_monstro(),
-        '6': lambda: gerar_encontro(nivel_party),
-        '7': lambda: abrir_bau(andar, n_players),
-        '10': lambda: salvar_dados()
+    option = input("--> ")
+    # --- The "Dispatch Table" ---
+    # We use 'lambda' to "delay" execution
+    # and to pass the correct arguments (party_level, floor).
+    options = {
+        '1': lambda: register_monster(),
+        '2': lambda: register_loot(),
+        '3': lambda: view_monsters(),
+        '4': lambda: view_loots(),
+        '5': lambda: create_monster(),
+        '6': lambda: generate_encounter(party_level),
+        '7': lambda: open_chest(floor, n_players),
+        '10': lambda: save_all_data()
     }
-    # 1. Usamos .get() para buscar a função no dicionário.
-    # 2. Se a 'opcao' (ex: '1') existe, 'funcao_a_executar'
-    #    recebe o lambda (ex: lambda: criar_monstro()).
-    # 3. Se a 'opcao' (ex: '5') não existe, 'funcao_a_executar' recebe 'None'.
-    funcao_a_executar = opcoes.get(opcao)
+    # 1. Use .get() to fetch functions.
+    # 2. If 'option' (e.g., '1') exists, 'function_to_execute'
+    #    receives the lambda (e.g., lambda: create_monster()).
+    # 3. If 'option' (e.g., '5') doesn't exist, 'function_to_execute' is 'None'.
+    function_to_execute = options.get(option)
 
-    if funcao_a_executar:
-        funcao_a_executar()  # Executa o lambda (que por sua vez chama a função real)
-        return True  # Retorna True para continuar no loop 'while opcao_menu:'
+    if function_to_execute:
+        function_to_execute()  # Executes the lambda (which calls the real function)
+        return True  # Returns True to continue the loop 'while menu_option:'
     else:
-        print("\nVoltando ao setup inicial...")
-        return False  # Retorna False para quebrar o loop 'while opcao_menu:'
+        print("\nReturning to initial setup...")
+        return False  # Returns False to break the loop 'while menu_option:'
     pass
 
 def main():
-    carregar_dados_monstros()
-    carregar_dados_loots()
+    load_all_data()
     while True:
-        print("="*20 + "Bem-Vindo Criador_Dev!" + "="*20)
+        print("="*20 + "Welcome Creator_Dev!" + "="*20)
         print()
-        print("Antes de começarmos, precisamos definir alguns valores... ")
-        n_players = int(input("Quantos jogadores estão jogando? --> "))
-        nivel = int(input("Em que nível, individualmente, eles estão? (Exe: todos estão no nível 3) --> "))
-        nivel_party = calcular_nivel_party(nivel, n_players)
-        print("Nível da Party é " + str(nivel_party))
-        andar = int(input("Em qual andar a party se encontra? --> "))
+        print("Before we start, we need to define some values... ")
+        try:
+            n_players = int(input("How many players are playing? --> "))
+            level = int(input("What level are they individually? (Ex: everyone is level 3) --> "))
+            party_level = calculate_party_level(level, n_players)
+            print("Party Level is " + str(party_level))
+            floor = int(input("What floor is the party on? --> "))
+        except ValueError:
+            print("Invalid input. Please enter numbers.")
+            continue
 
 
-        opcao_menu = True
-        while opcao_menu:
-            opcao_menu = menu(nivel_party, andar, n_players)
+        menu_option = True
+        while menu_option:
+            menu_option = menu(party_level, floor, n_players)
 
-    print("Programa finalizado")
+    print("Program finished")
     pass
 
 
