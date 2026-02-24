@@ -35,9 +35,12 @@ class ArmorType(Enum):
     plate = "Plate"
 
 class CharSize(Enum):
+    Tiny = "Tiny"
     Small = "Small"
     Medium = "Medium"
     Large = "Large"
+    Enormous = "Enormous"
+    Colossal = "Colossal"
 
 # --- Componentes do Personagem ---
 
@@ -119,34 +122,5 @@ class Character:
         self.hd_max = self.level
         self.hd = self.hd_max
         self.inv_slots = 10 + self.stats.STR
-
-"""
-class Archetype:
-    class ArmorType(Enum):
-        none = "None"
-        cloth = "Cloth"
-        leather = "Leather"
-        mail = "Mail"
-        plate = "Plate"
-
-    def __init__(self, name:str, key_stats:list, hit_die:int, level1_hp:int, saves:list, armor:, weapons:list,starting_gear:list):
-        self.name = name
-        self.key_stats = key_stats
-        self.hit_die = hit_die
-        self.level1_hp = level1_hp
-        self.saves = saves
-        self.armor = armor
-        self.weapons = weapons
-        self.starting_gear = starting_gear
-        pass
-
-class Stats:
-    pass
-
-class Character:
-    def __init__(self, name:str, archetype:Archetype, level:int, stats:Stats):
-        self.name = name
-        self.archetype = archetype
-        self.level = level
-        self.stats = stats
-"""
+    def __str__(self):
+        return f"The character {self.name} is a Level {self.level} {self.archetype.name} {self.ancestry.name}"

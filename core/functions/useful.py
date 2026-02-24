@@ -1,4 +1,4 @@
-from core.colors import RED, RESET
+from core.colors import *
 
 family_list = ["Aberration", "Spider", "Bandit", "Construct", "Cultist", "Dragon", "Drow",
     "Fey", "Beast", "Giant", "Gnoll", "Goblin", "Snakeman", "Lizardfolk", "Humanoid", "Fiend",

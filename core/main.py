@@ -1,18 +1,14 @@
-# from functions.useful import calculate_party_level
-# from functions.rng import open_chest, generate_encounter
-# from functions.manager_db import (
-#     load_monster_data,
-#     load_loot_data,
-#     save_data,
-#     create_monster,
-#     register_monster,
-#     register_loot,
-#     view_monsters,
-#     view_loots
-# )
-from functions.manager_db import *
-from functions.useful import *
-from functions.rng import *
+import sys
+import os
+# Add the project root (tower) to sys.path so that absolute imports work regardless of how the script is run.
+current_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.dirname(current_dir)
+if project_root not in sys.path:
+    sys.path.insert(0, project_root)
+
+from core.functions.manager_db import *
+from core.functions.useful import *
+from core.functions.rng import *
 
 value_in_gp = {} # table rarity with a value X in GP
 

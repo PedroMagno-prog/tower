@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Stress Test - Formulário de Gostos</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        fieldset {
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .inline-label {
+            display: inline;
+            font-weight: normal;
+        }
+
+        .help-text {
+            font-size: 0.8em;
+            color: gray;
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Pesquisa Definitiva de Preferências</h1>
+
+    <form action="/enviar_dados" method="POST" enctype="multipart/form-data" target="_blank" autocomplete="on"
+        id="meuFormulario">
+
+        <fieldset>
+            <legend>1. Informações Básicas (Textos e Padrões)</legend>
+
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" autofocus required>
+
+            <label for="segredo">Filme que você ama, mas tem vergonha de admitir (Senha):</label>
+            <input type="password" id="segredo" name="segredo" maxlength="20">
+
+            <label for="email">E-mail para Newsletter:</label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com" multiple>
+
+            <label for="playlist">Link da sua Playlist Favorita:</label>
+            <input type="url" id="playlist" name="playlist" placeholder="https://open.spotify.com/...">
+
+            <label for="telefone">Telefone (Somente números):</label>
+            <input type="tel" id="telefone" name="telefone" pattern="[0-9]{10,11}" title="Digite de 10 a 11 números">
+            <span class="help-text">Ex: 21999999999</span>
+        </fieldset>
+
+        <fieldset>
+            <legend>2. Escalas e Números</legend>
+
+            <label for="qtd_filmes">Quantos filmes você viu este ano?</label>
+            <input type="number" id="qtd_filmes" name="qtd_filmes" min="0" max="1000" step="5" value="0">
+
+            <label for="nota_musica">Nota para a música pop atual (0 a 10):</label>
+            <input type="range" id="nota_musica" name="nota_musica" min="0" max="10" step="1" value="5"
+                oninput="resultado_nota.value = nota_musica.value">
+            <output id="resultado_nota" for="nota_musica">5</output>
+        </fieldset>
+
+        <fieldset>
+            <legend>3. A Viagem Mais Emocionante (Datas e Tempos)</legend>
+
+            <label for="data_viagem">Data exata da viagem:</label>
+            <input type="date" id="data_viagem" name="data_viagem" min="2000-01-01">
+
+            <label for="hora_voo">Horário do voo:</label>
+            <input type="time" id="hora_voo" name="hora_voo">
+
+            <label for="momento_exato">Momento exato que você percebeu que a viagem seria épica:</label>
+            <input type="datetime-local" id="momento_exato" name="momento_exato">
+
+            <label for="mes_planejamento">Mês que começou a planejar:</label>
+            <input type="month" id="mes_planejamento" name="mes_planejamento">
+
+            <label for="semana_viagem">Semana do ano da viagem:</label>
+            <input type="week" id="semana_viagem" name="semana_viagem">
+        </fieldset>
+
+        <fieldset>
+            <legend>4. Seleções e Múltiplas Escolhas</legend>
+
+            <label>Gênero Musical Favorito (Escolha Única):</label>
+            <input type="radio" id="rock" name="genero_musical" value="rock">
+            <label for="rock" class="inline-label">Rock</label><br>
+            <input type="radio" id="jazz" name="genero_musical" value="jazz">
+            <label for="jazz" class="inline-label">Jazz</label><br>
+            <input type="radio" id="eletronica" name="genero_musical" value="eletronica" checked>
+            <label for="eletronica" class="inline-label">Eletrônica (Padrão)</label>
+
+            <label>Comidas que você gosta (Múltipla Escolha):</label>
+            <input type="checkbox" id="comida_japonesa" name="comidas" value="japonesa">
+            <label for="comida_japonesa" class="inline-label">Japonesa</label><br>
+            <input type="checkbox" id="churrasco" name="comidas" value="churrasco">
+            <label for="churrasco" class="inline-label">Churrasco</label><br>
+            <input type="checkbox" id="jilo" name="comidas" value="jilo" disabled>
+            <label for="jilo" class="inline-label">Jiló (Desabilitado via 'disabled')</label>
+
+            <label for="genero_filme">Gênero de Filme (Dropdown Clássico):</label>
+            <select id="genero_filme" name="genero_filme">
+                <optgroup label="Ação/Aventura">
+                    <option value="herois">Super-Heróis</option>
+                    <option value="espionagem">Espionagem</option>
+                </optgroup>
+                <optgroup label="Drama">
+                    <option value="historico">Histórico</option>
+                    <option value="romance" selected>Romance</option>
+                </optgroup>
+            </select>
+
+            <label for="idiomas">Idiomas que você assiste filmes (Segure CTRL para selecionar vários):</label>
+            <select id="idiomas" name="idiomas" multiple size="4">
+                <option value="pt">Português</option>
+                <option value="en">Inglês</option>
+                <option value="es">Espanhol</option>
+                <option value="fr">Francês</option>
+                <option value="ja">Japonês</option>
+            </select>
+
+            <label for="banda">Banda Favorita (Digite para buscar ou selecione):</label>
+            <input type="text" id="banda" name="banda" list="lista_bandas" autocomplete="off">
+            <datalist id="lista_bandas">
+                <option value="Daft Punk">
+                <option value="Led Zeppelin">
+                <option value="Iron Maiden">
+                <option value="Kraftwerk">
+            </datalist>
+        </fieldset>
+
+        <fieldset>
+            <legend>5. Arquivos, Textos Longos e Ocultos</legend>
+
+            <label for="cor_favorita">Sua cor favorita (Color Picker):</label>
+            <input type="color" id="cor_favorita" name="cor_favorita" value="#00aaff">
+
+            <label for="foto_viagem">Envie uma foto da viagem:</label>
+            <input type="file" id="foto_viagem" name="foto_viagem" accept="image/*" multiple>
+
+            <label for="historia">Conte a história da viagem:</label>
+            <textarea id="historia" name="historia" rows="5" cols="50" placeholder="Era uma vez..."
+                wrap="hard"></textarea>
+
+            <input type="hidden" name="id_usuario_sessao" value="1029384756">
+        </fieldset>
+
+        <fieldset>
+            <legend>6. Controles de Envio</legend>
+
+            <button type="submit">Enviar Formulário Oficialmente</button>
+
+            <input type="reset" value="Limpar Tudo">
+
+            <button type="button" onclick="alert('Isso é só um botão genérico com JS!')">Botão Genérico</button>
+
+            <br><br>
+            <span class="help-text">Ou clique na imagem abaixo para enviar:</span>
+            <input type="image" src="https://via.placeholder.com/150x50?text=Submit+Imagem" alt="Botão Enviar Imagem"
+                width="150" height="50">
+        </fieldset>
+
+    </form>
+</body>
+
+</html>

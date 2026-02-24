@@ -1,1 +1,8 @@
-[]
+[
+    {
+        "name": "Fire Sword",
+        "rarity": "Uncommon",
+        "value": 400,
+        "description": "Has 'Fire Aspect'. It does 1d6 fire damage to the first closest target in close range and clock wise"
+    }
+]
