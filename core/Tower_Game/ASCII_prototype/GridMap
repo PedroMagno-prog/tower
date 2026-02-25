@@ -1,0 +1,60 @@
+class Tile():
+    def __init__(self, type:str, symbol:str):
+        self.type = type
+        self.symbol = symbol
+
+class Grid():
+    def __init__(self, x_axis:int, y_axis:int):
+        self.x_axis = x_axis
+        self.y_axis = y_axis
+        self.grid = create_grid(x_axis, y_axis)
+
+Tiles = {
+    "wall_h": Tile("wall_horizontal", "███"),
+    "wall_v": Tile("wall_vertical", "█  "),
+    "empty": Tile("empty", "   "),
+    "floor": Tile("floor", "-  "),
+    "hero": Tile("hero", "H  "),
+    "monster": Tile("monster", "M  "),
+    "loot": Tile("loot", "?  "),
+    "start": Tile("start", "S  "),
+    "exit": Tile("exit", "E  ")
+
+def create_grid(x_axis, y_axis):
+    grid = []
+    for x in range(x_axis):
+        grid_line = []
+        for y in range(y_axis):
+            grid_line.append("")
+            if x == 0 or y == 0 or y == y_axis - 1 or x == x_axis - 1:
+                if x == 0 and y < y_axis - 1 or x == x_axis - 1 and y < y_axis - 1:
+                    grid_line[y] = "███" # Wall
+                else:
+                    grid_line[y] = "█  " # Wall
+            
+            if x == x_axis // 2 and y == y_axis // 2:
+                grid_line[y] = Tiles['hero'].symbol
+
+        grid.append(grid_line)
+    return grid    
+
+def fill_grid(x_axis, y_axis):
+    grid = []
+    for x in range(x_axis):
+        grid_line = []
+        for y in range(y_axis):
+            grid_line.append("-  ")
+            if x == 0 or y == 0 or y == y_axis - 1 or x == x_axis - 1:
+                if x == 0 and y < y_axis - 1 or x == x_axis - 1 and y < y_axis - 1:
+                    grid_line[y] = "███" # Wall
+                else:
+                    grid_line[y] = "█  " # Wall
+        grid.append(grid_line)
+    return grid    
+
+def print_grid(grid, x_axis, y_axis):
+    for i in range(x_axis):
+        line = "                    "              # 5 'tabs' to the right
+        for j in range(y_axis):
+            line += grid[i][j]
+        print(line)
