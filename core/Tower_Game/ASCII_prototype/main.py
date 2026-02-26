@@ -1,18 +1,25 @@
-from ASCII_prototype.GridMap import create_grid, print_grid
+from Grid import create_grid_id, print_grid, fill_grid, Grid
+from Map import Tile, tiles
 import os
 import time
+import sys
+
+sys.stdout.reconfigure(encoding='utf-8')
 
 def main():
     os.system('cls')
-    x = 17
-    y = 17
-    grid = create_grid(x, y)
+    # floor1 = Map(26, 31, )
+    x = 26
+    y = 31
+    
+    grid_id = create_grid_id(x, y)
+    grid = fill_grid(grid_id, x, y)
 
     while True:
-        print_grid(grid, x, y)
+        print_grid(grid)
         time.sleep(0.5)
         print()
-        input()
+        input(">")
         os.system('cls')
 
 main()
