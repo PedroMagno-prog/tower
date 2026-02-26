@@ -1,6 +1,13 @@
 from dataclasses import dataclass, field
 from enum import Enum
 
+"""
+Character
+    Hero
+    Monster
+    Companion
+"""
+
 
 @dataclass
 class Monster:
