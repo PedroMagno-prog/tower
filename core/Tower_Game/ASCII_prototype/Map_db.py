@@ -36,12 +36,14 @@ all_tiles = {
     "wall_v": Tile("wall_vertical", "█  ", True, 0),
     "empty": Tile("empty", "   ", True, 0),
     "water": Tile("water", f"{LIGHTBLUE}~~~{RESET}", True, 0),
+    "grass": Tile("grass", f"{LIGHTGREEN},,,{RESET}", False, 1),
     "floor": Tile("floor", "-  ", False, 1),
-    "stairs": Tile("stairs", "░░░", False, 2),
+    "stairs": Tile("stairs", "░░ ", False, 2),
+    "trees": Tile("trees", f"{GREEN}Y{RESET}  ", False, 2),
     "mountains": Tile("mountains", "^^^", True, 3),
     "hero": Tile("hero", f"{H1}H{RESET}  "),
-    "monster": Tile("monster", "M  "),
-    "loot": Tile("loot", "?  "),
+    "monster": Tile("monster", f"{H2}M{RESET}  "),
+    "loot": Tile("loot", f"{YELLOW}?{RESET}  "),
     "start": Tile("start", "S  "),
     "exit": Tile("exit", "E  ")
 }
