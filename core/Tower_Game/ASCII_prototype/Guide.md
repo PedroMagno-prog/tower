@@ -10,6 +10,9 @@ class Grid():
     x_axis = 3
     y_axis = 3
 
+    HAS COORDINATES
+    list *index*
+
     grid_id = [
         [Tile, Tile, Tile],
         [Tile, Tile, Tile],
